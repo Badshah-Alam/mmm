@@ -1,8 +1,21 @@
+import PaidFeatures from '@/app/_components/paid-features/paid-features'
 import React from 'react'
+import Mail from './_componets/mail'
 
 const page = () => {
   return (
-    <div>mails</div>
+    <div className="max-w-[1560px] min-h-screen w-full lg:w-[81%] lg:py-4  mx-auto">
+    
+    <div className="flex justify-between items-start w-full ">
+      <div className="w-full flex lg:mr-4 ">
+     
+    <Mail/>
+        </div>
+      <div className="hidden lg:block w-[312px]">
+        <PaidFeatures />
+      </div>
+    </div>
+  </div>
   )
 }
 

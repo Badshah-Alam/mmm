@@ -22,7 +22,7 @@ const Mail: React.FC = () => {
         <p className="text-gray-500">0 threads found</p>
       </div>
 
-      <div className="grid grid-cols-4 gap-8 justify-between border-b-2  text-[#525252]">
+      <div className="grid grid-cols-4 lg:gap-8 justify-between border-b-2  text-[#525252]">
         {inboxItems.map((item, index) => (
           <button
             key={index}

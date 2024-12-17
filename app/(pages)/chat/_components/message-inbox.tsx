@@ -54,6 +54,21 @@ const MessageInbox = () => {
                     </div>
                 </div> */} 
 
+                <div>
+                    <p className='text-center text-white text-sm mb-2'>Dec 18, 2024</p>
+                    <div className='bg-white p-3 rounded-lg mx-10'>
+                        <p>Sakir I love it when men give me likes, but I love it even more when they start chatting with me. Do you want to talk to me?</p>
+                        <p className='text-xs text-[#8f8f8f] mt-1'>9:37</p>
+                    </div>
+                </div>
+                <div>
+                    <p className='text-center text-white text-sm mb-2'>Dec 18, 2024</p>
+                    <div className='bg-white p-3 rounded-lg mx-10'>
+                        <p>HAVE YOU NOTICED HOW SOMETIMES SIMPLE THINGS MAKE US HAPPY? 🔥 Like this message. What makes you happy? 😊</p>
+                        <p className='text-xs text-[#8f8f8f] mt-1'>9:37</p>
+                    </div>
+                </div>
+
             </div>
 
             <div>

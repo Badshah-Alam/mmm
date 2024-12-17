@@ -8,11 +8,11 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuLabel,
+
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { FaSortDown } from "react-icons/fa"
+
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 

@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import { GoDotFill } from 'react-icons/go';
-import { HiCheckBadge } from 'react-icons/hi2';
-import { MenuDetails } from './_components/menu';
+
 import { usePathname } from 'next/navigation';
 import { SearchImg } from '@/data/search/search';
 import SliderImage from './_components/slider-image';

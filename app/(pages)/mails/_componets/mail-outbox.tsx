@@ -10,9 +10,9 @@ const MailOutbox = () => {
                      <FcSearch className="text-7xl" />
                    </div>
                    <h2 className="mt-4 py-25 text-xl  font-bold">
-                   You haven't sent any Letters
+                   {`You haven't sent any Letters`}
                    </h2>
-                   <p className="text-gray-500">Let's change that!</p>
+                   <p className="text-gray-500">{`Let's change that!`}</p>
                    <div className="mt-4 flex items-center gap-2 px-6 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 cursor-pointer">
                      <p>Go to search</p>
                      <LuUserSearch />

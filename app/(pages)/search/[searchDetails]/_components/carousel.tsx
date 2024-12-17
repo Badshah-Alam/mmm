@@ -31,7 +31,7 @@ const CarouselViewDetails = () => {
 
             <div className="flex gap-2 ">
 
-                {Object.values(SearchImg).slice(active, active + showItems).map((item: any, index: number) => (
+                {Object.values(SearchImg).slice(active, active + showItems).map((item, index: number) => (
                     <div key={index} >
 
                         <Link href={{

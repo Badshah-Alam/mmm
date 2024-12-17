@@ -1,14 +1,8 @@
 "use client";
-import { LuUserSearch } from "react-icons/lu";
-import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { FcSearch } from "react-icons/fc";
+
+
+
+
 import React, { useState } from "react";
 import MailInbox from "./mail-inbox";
 import MailStarRed from "./mail-starred";

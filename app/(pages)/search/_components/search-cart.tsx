@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card"
 // import { SearchImg } from '@/data/search/search'
 import { Button } from '@/components/ui/button'
 import { GoDotFill } from 'react-icons/go'
-import { CiHeart } from 'react-icons/ci'
+
 import { FaCamera, FaRegHeart } from 'react-icons/fa'
 import Link from 'next/link'
 import { PaginationDemo } from './pagination'
@@ -15,7 +15,7 @@ const SearchCart = () => {
     return (
         <div>
             <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 mt-4 px-4 lg:px-0 '>
-                {Object.values(SearchImg).map((item: any, index: number) => (
+                {Object.values(SearchImg).map((item, index: number) => (
                     <div key={index} >
                         <div className='relative'>
                             <Card >

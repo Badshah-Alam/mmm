@@ -1,5 +1,5 @@
 
-import PaidFeatures from "../_components/paid-features/paid-features";
+
 
 export default function About({
   children,

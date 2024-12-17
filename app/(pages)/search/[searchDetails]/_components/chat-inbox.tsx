@@ -4,7 +4,8 @@ import { BsPhoneFlip } from 'react-icons/bs'
 import { FaRegFaceGrinTongueWink } from 'react-icons/fa6'
 import { HiCircleStack, HiInformationCircle } from 'react-icons/hi2'
 import { IoSend } from 'react-icons/io5'
-import { MdEmail, MdMail } from 'react-icons/md'
+import { MdMail } from 'react-icons/md'
+
 import { PiChatCircleDotsLight, PiHandWavingDuotone } from 'react-icons/pi'
 
 const ChatInbox = () => {
@@ -48,7 +49,7 @@ const ChatInbox = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 px-2 ">
           <Button variant="secondary" size="secondary" className="w-full h-11 ">
-            <PiChatCircleDotsLight /> Let's talk
+            <PiChatCircleDotsLight /> {`Let's talk`}
           </Button>
           <Button variant="secondary" size="secondary" className="w-full h-11 ">
             <PiChatCircleDotsLight /> Stickers

@@ -66,7 +66,7 @@ const MessageInbox = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 px-2 ">
                     <Button variant="secondary" size="secondary" className="w-full h-11 ">
-                        <PiChatCircleDotsLight /> Let's talk
+                        <PiChatCircleDotsLight /> <p>{`Let's talk`}</p>
                     </Button>
                     <Button variant="secondary" size="secondary" className="w-full h-11 ">
                         <PiChatCircleDotsLight /> Stickers

@@ -4,7 +4,7 @@ import React from 'react'
 
 const PaidFeatures = () => {
   return (
-    <div className='flex flex-col gap-y-4'>
+    <div className='flex flex-col gap-y-4 '>
       <div className='flex flex-col gap-y-4 shadow-lg bg-white py-4 px-4'>
         <p className='text-[18px] font-semibold'>Get More with Credits</p>
         <div className='flex flex-col '>

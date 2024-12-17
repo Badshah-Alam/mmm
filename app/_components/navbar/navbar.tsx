@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <div className='sticky top-0 z-50 bg-[#ffffff] shadow-md'>   
             <div className='hidden lg:block' >
-            <div className='max-w-[1560px] w-[81%] mx-auto flex justify-between items-center '>
+            <div className='max-w-[1560px] w-[90%] mx-auto flex justify-between items-center '>
                 <div>
                     <p className='text-[18px] xl:text-2xl uppercase font-semibold'>Match Meet n Marry</p>
                 </div>

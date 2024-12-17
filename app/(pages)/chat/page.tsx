@@ -6,7 +6,7 @@ import InboxFilter from './_components/inbox-filter';
 
 const ChartPage = () => {
   return (
-    <div className="max-w-[1560px] min-h-screen w-full lg:w-[81%] lg:py-4  mx-auto">
+    <div className="max-w-[1560px] min-h-screen w-full lg:w-[90%] lg:py-4  mx-auto">
     
     <div className="flex justify-between items-start w-full ">
       <div className="w-full flex lg:mr-4 ">
@@ -14,7 +14,7 @@ const ChartPage = () => {
       <InboxFilter/>
       <MessageInbox/>
         </div>
-      <div className="hidden lg:block w-[312px]">
+      <div className="hidden xl:block min-w-[312px] w-[312px]">
         <PaidFeatures />
       </div>
     </div>

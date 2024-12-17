@@ -4,12 +4,12 @@ import { SearchImg } from '@/data/search/search'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-import { BsPhoneFlip } from 'react-icons/bs'
-import { FaRegFaceGrinTongueWink } from 'react-icons/fa6'
+
+
 import { HiCircleStack, HiInformationCircle } from 'react-icons/hi2'
 import { IoSend } from 'react-icons/io5'
 import { MdMail } from 'react-icons/md'
-import { PiChatCircleDotsLight, PiHandWavingDuotone } from 'react-icons/pi'
+import { PiChatCircleDotsLight,  } from 'react-icons/pi'
 
 const MessageInbox = () => {
     const pathname = usePathname();
@@ -19,7 +19,7 @@ const MessageInbox = () => {
         return <div>Chart not found!</div>;
     }
     return (
-        <div className='shadow-xl border rounded-md  w-full'>
+        <div className='shadow-xl border-x rounded-md  w-full'>
             <div className='flex bg-white justify-between items-center px-4 py-2'>
                 <div className='flex gap-2 items-center  w-full'>
                     <div className="relative">
@@ -34,8 +34,8 @@ const MessageInbox = () => {
                     <MdMail className='text-xl' /> Change to mail
                 </Button>
             </div>
-            <div className='bg-[#b7ddf3] py-20 gap-y-3 flex flex-col justify-center items-center'>
-                <div className='bg-[#D5E9F4] flex justify-center items-center w-[110px] h-[110px] rounded-full'>
+            <div className='bg-[#b7ddf3] h-[400px] py-20 gap-y-3 flex flex-col justify-center items-center'>
+                {/* <div className='bg-[#D5E9F4] flex justify-center items-center w-[110px] h-[110px] rounded-full'>
                     <BsPhoneFlip className='text-6xl ' />
                 </div>
                 <p className='text-2xl font-semibold'>Dare to make a move</p>
@@ -52,7 +52,7 @@ const MessageInbox = () => {
                             Say hello
                         </Button>
                     </div>
-                </div>
+                </div> */} 
 
             </div>
 

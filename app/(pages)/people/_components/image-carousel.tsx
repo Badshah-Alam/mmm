@@ -2,20 +2,13 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import React, { useState } from "react";
+import { BsPatchCheckFill } from "react-icons/bs";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import AboutProfile from "./about-profile";
+import { ProfileImg } from "@/data/profile/profile";
 
-interface ProfileImg {
-  id: number;
-  image: string;
-}
 
-const ProfileImg = [
-  { id: 1, image: "/assets/images/people/img1.webp" },
-  { id: 2, image: "/assets/images/people/img2.webp" },
-  { id: 3, image: "/assets/images/people/img3.webp" },
-  { id: 4, image: "/assets/images/people/img4.webp" },
-  { id: 5, image: "/assets/images/search/body (9).webp" },
-];
+
 
 const ImageCarousel = () => {
   const [active, setActive] = useState(0);
@@ -30,10 +23,10 @@ const ImageCarousel = () => {
 
   return (
     <div className="flex  justify-center">
-      <div className="flex  justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
 
         {/* Image Carousel */}
-        <div className=" w-[95%] mx-auto xl:w-[400px]  relative">
+        <div className="w-full lg:w-[95%] mx-auto xl:w-[400px]  relative">
         <button
             onClick={handlePrev}
             className="px-4 py-4 absolute left-0 top-1/2  bg-[#bebebe] text-dark-smoke rounded-r-full"
@@ -45,7 +38,7 @@ const ImageCarousel = () => {
               src={ProfileImg[active].image}
               width={600}
               height={296}
-              className="w-full h-full rounded-lg"
+              className="w-full h-full rounded-xl"
               alt={`Profile Image ${ProfileImg[active].id}`}
             />
           </Card>
@@ -66,14 +59,18 @@ const ImageCarousel = () => {
               />
             ))}
           </div>
-        
+          <div className="absolute flex items-center gap-2 top-5 left-4 ">
+          <BsPatchCheckFill className="text-xl text-blue-600 bg-white rounded-full" />
+            <p className="text-white font-bold text-xl underline">Alina</p>
+          </div>
+          
+          
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between mt-4">
-       
-      
-        </div>
+        <div className=" xl:w-[400px]   -mt-4    ">
+            <AboutProfile />
+          </div>
       </div>
     </div>
   );

@@ -86,7 +86,7 @@ const SliderImage = () => {
                                     alt={`search-image-${index}`}
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-                                <p className="flex flex-col items-center absolute inset-0 uppercase flex items-center justify-center text-white font-bold text-xl">
+                                <p className="   absolute inset-0 uppercase flex items-center gap-2 justify-center text-white font-bold text-xl">
                                 <FaRegEyeSlash className='text-xl' />
                                 Private
                             </p>

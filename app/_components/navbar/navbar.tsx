@@ -3,7 +3,8 @@ import { MenuItems } from '@/data/navbar/navbar';
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { BsFillQuestionCircleFill } from 'react-icons/bs';
-import { CgProfile } from 'react-icons/cg';
+
+import { NavMenu } from './nav-menu';
 
 
 
@@ -45,10 +46,12 @@ const Navbar = () => {
                     <BsFillQuestionCircleFill className='text-4xl  text-[#aeadb3]'/>  
                     <p className='text-base font-semibold text-[#5e6266] '>Not sure</p>
                     </div>
-                   <div className='flex flex-col justify-center items-center gap-y-1   py-4 w-[75px] xl:w-[90px] gap-y-1'>
+                   {/* <div className='flex flex-col justify-center items-center    py-4 w-[75px] xl:w-[90px] gap-y-1'>
                    <CgProfile className='text-4xl text-[#aeadb3]'/>
                    <p className='text-sm xl:text-base font-semibold text-[#5e6266] '>My profile</p>
-                   </div>      
+                   <NavMenu />
+                   </div>       */}
+                    <NavMenu />
                 </div>
             </div>
             </div>
@@ -62,9 +65,9 @@ const Navbar = () => {
                     <BsFillQuestionCircleFill className='text-4xl  text-[#aeadb3]'/>  
                     </div>
                
-                   <div className='flex justify-center items-center gap-y-1   py-4 w-[75px] xl:w-[90px] gap-y-1'>
-                   <CgProfile className='text-4xl text-[#aeadb3]'/>
-                 
+                   <div className='flex justify-center items-center    py-4 w-[75px] xl:w-[90px] gap-y-1'>
+                   {/* <CgProfile className='text-4xl text-[#aeadb3]'/> */}
+                   <NavMenu />
                    </div>      
                 </div>
                 </div>

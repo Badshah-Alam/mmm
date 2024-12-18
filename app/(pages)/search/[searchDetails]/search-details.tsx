@@ -23,8 +23,7 @@ const SearchDetails = () => {
                    <ChatDetails/>
                    <ChatInbox/>
                    <Information/>
-                   <ProfileDetails/>
-                
+                   <ProfileDetails/>    
             </div>
 
         </div>

@@ -1,4 +1,4 @@
-import { Key } from "lucide-react";
+
 
 
 interface SearchImgItem {
@@ -58,7 +58,7 @@ export const SearchImg: SearchImg= {
     camera: 8,
     mutipleImages: [
       { image: "/assets/images/search/body (9).webp" },
-      { image: "/assets/images/search/body (10).webp" },
+      { image: "/assets/images/people/body (10).webp" },
       { image: "/assets/images/search/body (11).webp" },
       { image: "/assets/images/search/body (12).webp" }
     ]

@@ -33,14 +33,14 @@ const ImageCarousel = () => {
       <div className="flex  justify-center items-center">
 
         {/* Image Carousel */}
-        <div className=" w-[95%] mx-auto xl:w-[400px] aspect-[3/2] relative">
+        <div className=" w-[95%] mx-auto xl:w-[400px]  relative">
         <button
             onClick={handlePrev}
             className="px-4 py-4 absolute left-0 top-1/2  bg-[#bebebe] text-dark-smoke rounded-r-full"
           >
             <FaAngleLeft />
           </button>
-          <Card className=" flex justify-center items-center">
+          <Card className="aspect-[2/3] flex justify-center items-center">
             <Image
               src={ProfileImg[active].image}
               width={600}

@@ -3,7 +3,7 @@ import { GoDotFill } from 'react-icons/go'
 
 const JoinDetails = () => {
   return (
-   <div className='flex flex-col gap-4 w-full h-full'>
+   <div className='flex flex-col gap-4 lg:px-2 px-0  w-full h-full'>
      <div className='flex items-center gap-2 text-red-500'>
   <GoDotFill className='text-3xl' />
     <p className='text-2xl font-semibold'>WHY JOIN</p>

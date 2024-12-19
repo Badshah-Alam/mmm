@@ -21,7 +21,8 @@ const Payment = () => {
         </div>
         <div className=" flex justify-center items-center my-16  w-full ">
            <div className="flex flex-col justify-center items-center ">
-            <Image src="https://bestdates.com/static/img/svg/empty/emptyBillingHistory.svg" alt="billing" width={244} height={244} className=" h-[150px] w-[150px] lg:h-[244px] lg:w-[244px]  "/>
+            <Image src="/assets/images/payments/img1.png" alt="img"  width={244} height={244} className=" h-[150px] w-[150px] lg:h-[244px] lg:w-[244px]" />
+
             <p className="text-[#333] text-[20px]  font-semibold mt-4 text-center mx-2">No billing history</p>
             <p className="text-[#525252] text-center mx-2 ">Your transactions will appear here.</p>
            </div>

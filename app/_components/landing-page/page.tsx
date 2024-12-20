@@ -5,7 +5,7 @@ import LandingForm from './landing-form'
 import LandingAbout from './landing-about'
 
 const LandingMain = () => {
-    const formRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
   
   const handleScrollToForm = () => {
     if (formRef.current) {

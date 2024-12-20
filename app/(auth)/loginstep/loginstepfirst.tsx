@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+
 import React from "react";
 import Image from "next/image";
 import { loginStepData } from "@/data/loginstep/loginstep";
@@ -21,7 +21,7 @@ const LoginStepFirst = () => {
 
             <Link href="/loginstep/step2">
             <button className="text-[16px] font-semibold sm:px-8 text-nowrap w-full lg:w-[300px] md:px-28 lg:w-px-28 py-4 sm:py-4 md:py-4 bg-gradient-to-r from-[#F05A8E] to-[#ED1C24]  text-white text-sm sm:text-base md:text-lg rounded hover:bg-orange-600 border-none">
-              Let's do it!
+              {`Let's do it!`}
             </button>
         </Link>
           </div>

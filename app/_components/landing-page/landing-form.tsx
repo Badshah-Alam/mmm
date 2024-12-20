@@ -1,3 +1,4 @@
+import { RefObject } from 'react';
 import React from "react";
 import {
   Select,
@@ -10,7 +11,7 @@ import {
 } from "@/components/ui/select";
 import JoinDetails from "./join-details";
 import Link from "next/link";
-const LandingForm = (props: { ref: React.RefObject<HTMLDivElement> }) => {
+const LandingForm = (props: { ref: RefObject<HTMLDivElement | null> }) => {
   return (
     <div className="bg-smoke-mmm lg:w-full py-10 lg:py-0 w-[96%] mx-auto ">
       <div className="flex flex-col lg:flex-row justify-center items-start w-full gap-y-10 lg:gap-x-10 p-0 lg:p-24 ">

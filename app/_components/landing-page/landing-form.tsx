@@ -9,7 +9,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import JoinDetails from "./join-details";
-const LandingForm = () => {
+import Link from "next/link";
+const LandingForm = (props: { ref: React.RefObject<HTMLDivElement> }) => {
   return (
     <div className="bg-smoke-mmm lg:w-full py-10 lg:py-0 w-[96%] mx-auto ">
       <div className="flex flex-col lg:flex-row justify-center items-start w-full gap-y-10 lg:gap-x-10 p-0 lg:p-24 ">
@@ -17,8 +18,8 @@ const LandingForm = () => {
             <JoinDetails/>
         </div>
        <div className="lg:min-w-[450px] lg:max-w-[450px] flex flex-col justify-center items-center gap-4 ">
-       <div className="w-full bg-white rounded-xl shadow-xl md:p-6 p-4 ">
-        <form action="">
+       <div ref={props.ref} className="w-full bg-white rounded-xl shadow-xl md:p-6 p-4 ">
+        <form action="" >
         <div className="flex flex-col gap-6">
           <div>
             <p className="text-red-500 text-md font-semibold">
@@ -63,7 +64,7 @@ const LandingForm = () => {
               <input
                 type="text"
                 placeholder="Enter Your name"
-                className="w-full placeholder:text-base py-1 border-b-2 text-base hover:border-red-600 font-semibold rounded-none p-0 shadow-none  focus:ring-0  focus:outline-none"
+                className="w-full placeholder:text-base py-2 border-b-2 text-base hover:border-red-600 font-semibold rounded-none p-0 shadow-none  focus:ring-0  focus:outline-none"
               />
             </div>
 
@@ -202,7 +203,7 @@ const LandingForm = () => {
               <input
                 type="email"
                 placeholder="Enter Your Email"
-                className="w-full placeholder:text-base py-1 border-b-2 text-base hover:border-red-600 font-semibold rounded-none p-0 shadow-none  focus:ring-0  focus:outline-none"
+                className="w-full placeholder:text-base py-2 border-b-2 text-base hover:border-red-600 font-semibold rounded-none p-0 shadow-none  focus:ring-0  focus:outline-none"
               />
             </div>
 
@@ -211,14 +212,18 @@ const LandingForm = () => {
               <input
                 type="password"
                 placeholder="Enter Your Password"
-                className="w-full placeholder:text-base py-1 border-b-2 text-base hover:border-red-600 font-semibold rounded-none p-0 shadow-none  focus:ring-0  focus:outline-none"
+                className="w-full placeholder:text-base py-2 border-b-2 text-base hover:border-red-600 font-semibold rounded-none p-0 shadow-none  focus:ring-0  focus:outline-none"
               />
             </div>
             <div className="flex items-start gap-3">
                 <input  type="checkbox" className='pt-1 w-10 h-10'/>
                 <p className="text-base underline">I have read, understand and agree to Terms of Use, Privacy Policy, Payment and Refund Policy, Misconduct Prevention Policy.</p>
             </div>
-            <button className="text-xl w-full py-3 bg-red-600 text-white font-semibold text-center rounded-md">Register</button>
+         
+            <Link href="/loginstep">
+            <button className="text-xl w-full py-3 bg-gradient-to-r from-[#F05A8E] to-[#ED1C24] text-white font-semibold text-center rounded-md">Register</button>
+         
+        </Link>
           </div>
         </form>
         

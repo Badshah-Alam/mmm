@@ -1,6 +1,7 @@
 
 import React from 'react'
-import { AiOutlineMenuFold } from 'react-icons/ai'
+
+import SearchFilter from './search-filter'
 
 const SearchNav = () => {
     return (
@@ -13,10 +14,8 @@ const SearchNav = () => {
                     <p className='text-[#525252] px-4 py-2 rounded-full text-base font-semibold'>Following</p>
                 </div>
             </div>
-            <div className='flex gap-x-1 items-center cursor-pointer text-[#F77705] '>
-                filter
-                <AiOutlineMenuFold className='text-2xl'/>
-            </div>
+           
+            <SearchFilter/>
         </div>
     )
 }

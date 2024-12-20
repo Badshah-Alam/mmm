@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowDownLong } from "react-icons/fa6";
-const LandingPage = () => {
+
+const LandingPage: React.FC<{ handleScrollToForm: () => void }> = ({ handleScrollToForm }) => {
+
+
   return (
     <div className="lg:min-h-screen  bg-[url('/assets/images/login/imgpsh_fullsize_anim.png')]  bg-cover bg-center ">
       <div className="p-10">
@@ -21,21 +24,21 @@ const LandingPage = () => {
         <p className="text-white text-base md:text-2xl font-semibold uppercase">
           Believe in Strong Connections Online
         </p>
-        <button className="bg-gradient-to-r from-[#F05A8E] to-[#ED1C24] text-white py-2 px-4 rounded-full uppercase">
+        <button onClick={handleScrollToForm} className="bg-gradient-to-r from-[#F05A8E] to-[#ED1C24] text-white py-2 px-4 rounded-full uppercase">
           Join for free
         </button>
         <Link href="/login">
           <button className="bg-gradient-to-r from-[#F05A8E] to-[#ED1C24]  text-white py-2 px-4 rounded-full uppercase">
-            Login{" "}
+            Login
           </button>
         </Link>
       </div>
-      <div className="flex flex-col items-center pb-1 justify-center  ">
+      <button onClick={handleScrollToForm} className="flex flex-col items-center pb-1 justify-center mx-auto ">
         <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F05A8E] to-[#ffffff]  text-base font-bold ">
           scroll Down
         </p>
         <FaArrowDownLong className="text-white  text-2xl  " />
-      </div>
+      </button >
     </div>
   );
 };

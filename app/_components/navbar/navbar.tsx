@@ -2,10 +2,11 @@
 import { MenuItems } from "@/data/navbar/navbar";
 import Link from "next/link";
 import React, { useState } from "react";
-import { BsFillQuestionCircleFill } from "react-icons/bs";
+
 
 import { NavMenu } from "./nav-menu";
 import Image from "next/image";
+import NotSure from "./not-sure";
 
 const Navbar = () => {
   const [activeId, setActiveId] = useState<number | null>(1);
@@ -61,12 +62,13 @@ const Navbar = () => {
             ))}
           </div>
           <div className="flex">
-            <div className="flex flex-col justify-center items-center  py-4 w-[75px] xl:w-[90px] gap-y-1">
+            {/* <div className="flex flex-col justify-center items-center  py-4 w-[75px] xl:w-[90px] gap-y-1">
               <BsFillQuestionCircleFill className="text-4xl  text-[#aeadb3]" />
               <p className="text-base font-semibold text-[#5e6266] ">
                 Not sure
               </p>
-            </div>
+            </div> */}
+            <NotSure/>
            
             <NavMenu />
           </div>
@@ -87,7 +89,8 @@ const Navbar = () => {
        </div>
           <div className="flex justify-end ">
             <div className="flex justify-center items-center    gap-y-1">
-              <BsFillQuestionCircleFill className="text-4xl  text-[#aeadb3]" />
+              {/* <BsFillQuestionCircleFill className="text-4xl  text-[#aeadb3]" /> */}
+              <NotSure/>
             </div>
 
             <div className="flex justify-center items-center    gap-y-1">

@@ -16,17 +16,19 @@ const Step2 = () => {
   ];
   return (
     <div className="max-w-[1560px] w-[90%] mx-auto py-16 flex justify-center   ">
-      <div className="bg-white  flex flex-col  justify-center lg:min-w-[600px] lg:w-[600px] mx-auto  ">
-        <div className="py-3 flex items-center  w-full bg-white">
-          <div className="border flex items-center justify-start rounded-r-full py-2 px-3">
+      <div className="bg-white  flex flex-col  justify-center lg:min-w-[600px] lg:w-[600px] mx-auto rounded-lg ">
+        <div className="py-3 flex items-center  w-full ">
+        <Link href="/loginstep" >
+        <button className="border flex items-center justify-center rounded-r-full py-2 px-3">
             <FaAngleLeft />
-          </div>
+          </button>
+          </Link>
 
           <div className="flex items-center w-[90%] justify-center text-base text-gray-600 font-semibold">
             <p className="pr-2">Part</p>
             <p>2</p>
             <span className="px-1">/</span>
-            <p>3</p>
+            <p>7</p>
           </div>
         </div>
 
@@ -54,12 +56,12 @@ const Step2 = () => {
             </button>
           ))}
         </div>
-        <div className="flex justify-between items-center border-t-2  gap-2 px-8 bg-white py-2">
+        <div className="flex justify-between items-center border-t-2  gap-2 px-8  py-2">
           <button className="border border-gray-300 w-[50%] px-2 py-3">
             Skip
           </button>
         
-          <Link href="/search" className="w-full">
+          <Link href="/loginstep/step31" className="w-full">
           <button className="bg-gradient-to-r w-full from-[#F05A8E] to-[#ED1C24] hover:bg-gradient-to-r  hover:to-[#F05A8E] hover:from-orange-mmm text-white px-6 py-3">
             continue
           </button>

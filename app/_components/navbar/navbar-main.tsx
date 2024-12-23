@@ -11,13 +11,13 @@ const NavbarMain = () => {
 
   return (
     <>
-      {pathname === "/loginstep" ||
+      {pathname === "/loginstep" || ( pathname === "/loginstep/step31" && <NavbarThird />) || ( pathname === "/loginstep/step4" && <NavbarThird /> ) || (pathname === "/loginstep/step5" && <NavbarThird />) || (pathname === "/loginstep/step6" && <NavbarThird /> )||
         (pathname === "/loginstep/step2" && <NavbarThird />)}
       {pathname === "/login" && <NavbarSecond />}
       {pathname !== "/" &&
         pathname !== "/login" &&
         pathname !== "/loginstep" &&
-        pathname !== "/loginstep/step2" && <Navbar />}
+        pathname !== "/loginstep/step2" && pathname !== "/loginstep/step31" && pathname !== "/loginstep/step4" && pathname !== "/loginstep/step5" && pathname !== "/loginstep/step6" && <Navbar />}
     </>
   );
 };

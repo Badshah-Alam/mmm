@@ -1,5 +1,6 @@
 import PaidFeatures from '@/app/_components/paid-features/paid-features'
 import React from 'react'
+import YourProfile from './yourprofile'
 
 const page = () => {
   return (
@@ -7,7 +8,7 @@ const page = () => {
     
     <div className="flex justify-between items-start w-full ">
       <div className="w-full flex flex-col lg:mr-4">
-    profile
+  <YourProfile/>
         </div>
       <div className="hidden  xl:block min-w-[312px] w-[312px]">
         <PaidFeatures />

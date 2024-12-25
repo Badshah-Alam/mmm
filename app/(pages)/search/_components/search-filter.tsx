@@ -60,11 +60,11 @@ const SearchFilter = () => {
                         <SelectItem value="United_States">
                           United States
                         </SelectItem>
-                        <SelectItem value="united_kingdom">
+                        <SelectItem value="kingdom">
                           United Kingdom
                         </SelectItem>
                         <SelectItem value="canada">Canada</SelectItem>
-                        <SelectItem value="canada">Australia</SelectItem>
+                        <SelectItem value="australia">Australia</SelectItem>
                       </SelectGroup>
                     </SelectContent>
                   </Select>
@@ -127,10 +127,10 @@ const SearchFilter = () => {
                       <SelectContent>
                         <SelectGroup>
                           <SelectLabel>Preferences</SelectLabel>
-                          <SelectItem value="man-woman">
+                          <SelectItem value="man">
                             I am a man looking for a woman
                           </SelectItem>
-                          <SelectItem value="woman-man">
+                          <SelectItem value="woma">
                             I am looking for every one
                           </SelectItem>
                           <SelectItem value="woman-man">

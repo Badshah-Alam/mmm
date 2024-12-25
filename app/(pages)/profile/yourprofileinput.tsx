@@ -179,7 +179,6 @@ const YourProfileInput = () => {
   //   setTo(newValue);
   //   setValues([Math.min(newValue, values[0]), newValue]);
   // };
-
   const handleFromChange = (value: number | string): void => {
     const newValue = parseInt(value.toString(), 10); // Ensure value is converted to string for parsing
     setFrom(newValue);

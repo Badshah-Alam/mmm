@@ -35,7 +35,7 @@ export function NavMenu() {
           </DropdownMenuItem>
           <DropdownMenuItem className="py-2 font-semibold">
          
-            <Link href="#">  Settings</Link>
+            <Link href="/settings">  Settings</Link>
         
           </DropdownMenuItem>
           <DropdownMenuItem className="py-2 font-semibold">

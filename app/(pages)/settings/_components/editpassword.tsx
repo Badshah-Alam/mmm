@@ -129,7 +129,7 @@ const EditPasswordForm: React.FC = () => {
               <input
                 id="newPassword"
                 type={showNewPassword ? "text" : "password"}
-                placeholder="Enter New Password (8+ characters)"
+                placeholder="Enter New Password (8+char)"
                 className="w-full px-4 py-3 border rounded-md focus:outline-none focus:border-gray-400"
                 value={formData.newPassword}
                 onChange={handleInputChange}
@@ -194,3 +194,4 @@ const EditPasswordForm: React.FC = () => {
 };
 
 export default EditPasswordForm;
+

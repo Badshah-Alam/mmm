@@ -59,7 +59,11 @@ export const SearchImg: SearchImg= {
     mutipleImages: [
       { image: "/assets/images/search/body (9).webp" },
       { image: "/assets/images/people/body (10).webp" },
-      { image: "/assets/images/search/body (11).webp" },
+    
+      { image: "/assets/images/search/body (12).webp" },
+      { image: "/assets/images/search/body (12).webp" },
+      { image: "/assets/images/search/body (12).webp" },
+      { image: "/assets/images/search/body (12).webp" },
       { image: "/assets/images/search/body (12).webp" },
       { image: "/assets/images/search/body (12).webp" },
       { image: "/assets/images/search/body (12).webp" },

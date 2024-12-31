@@ -10,7 +10,7 @@ const LoginStepFirst = () => {
       <div className="relative w-full lg:h-[515px] xl:h-[700px] flex  items-end   to-smoke-mmm">
         <div className="absolute lg:top-0 bottom-0 z-10 left-1/2 transform -translate-x-1/2 lg:text-center w-full  bg-gradient-to-b from-transparent to-white lg:bg-none ">
           <p className="text-xl font-bold sm:text-2xl md:text-3xl text-[36px] text-black  ">
-            Welcome to BestDates!
+            Welcome to  Match Meet & Marry!
           </p>
           <p className="text-[#525252]  text-sm sm:text-base md:text-lg font-normal leading-6 lg:py-4 ">
             Please take this quiz to complete your profile <br/> and use our

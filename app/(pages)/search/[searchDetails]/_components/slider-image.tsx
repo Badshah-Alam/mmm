@@ -2,18 +2,17 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { FaRegEyeSlash, FaRegHeart, FaRegStar } from "react-icons/fa";
 import { FaRegFaceGrinTongueWink } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import { SearchImg } from "@/data/search/search";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa6";
+import { IoChevronUp } from "react-icons/io5";
+import { MdZoomOutMap } from "react-icons/md";
+import { LuFileChartLine } from "react-icons/lu";
+
 import {
   Dialog,
   DialogContent,
@@ -24,6 +23,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { AiOutlineLike } from "react-icons/ai";
 
 interface ImageData {
   id?: number;
@@ -41,6 +41,7 @@ const SliderImage: React.FC = () => {
 
   const chartid = parseInt(pathname.split("/")[2], 10);
   const chartData: ChartData | undefined = SearchImg[chartid];
+
   const [carouselState, setCarouselState] = useState({
     startIndex: 0,
     visibleImagesCount: 5,
@@ -85,15 +86,119 @@ const SliderImage: React.FC = () => {
   return (
     <div className="flex">
       <div className="flex flex-col gap-y-3">
-        <Card>
-          <Image
-            src={chartData.image}
-            width={1000}
-            height={296}
-            className="xl:min-w-[296px] xl:w-[296px] w-full h-full object-cover"
-            alt={chartData.image}
-          />
-        </Card>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Card>
+              <Image
+                src={chartData.image}
+                width={1000}
+                height={296}
+                className="xl:min-w-[296px] xl:w-[296px] w-full h-full object-cover cursor-pointer"
+                alt={chartData.image}
+              />
+            </Card>
+            {/* <Image
+                      src={img.image}
+                      width={100}
+                      height={100}
+                      className="w-full h-full aspect-square object-cover cursor-pointer"
+                      alt={`search-image-${index}`}
+                    /> */}
+          </DialogTrigger>
+          <DialogContent className="max-w-[90%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] mx-auto">
+            <DialogHeader>
+              <DialogTitle>
+                <div className="grid grid-cols-2 items-center border shadow-md w-full p-2">
+                  {/* <Image
+                            className="w-12 h-12 md:w-16 md:h-16 rounded-full"
+                            src={img.image}
+                            width={50}
+                            height={50}
+                            alt={`search-image-${index}`}
+                          /> */}
+                  <p className="text-sm md:text-base">
+                    Photos: {startIndex + 1}
+                  </p>
+                </div>
+              </DialogTitle>
+              <DialogDescription>
+                {/* Explore the image in more detail. */}
+              </DialogDescription>
+            </DialogHeader>
+
+            <div className="flex flex-col sm:flex-row justify-center  px-2 md:gap-20 ">
+              {/* Thumbnail Navigation */}
+              <div className="hidden sm:flex flex-col items-center">
+                <button
+                  onClick={handlePrevious}
+                  className="mb-2 bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                >
+                  <IoChevronUp />
+                </button>
+                <div className="sm:h-[300px] sm:w-[80px] md:w-[100px] overflow-hidden border border-gray-300 flex flex-col items-center gap-2">
+                  {getVisibleImages().map((img, index) => (
+                    <Image
+                      key={index}
+                      src={img.image}
+                      alt={`carousel-image-${startIndex + index}`}
+                      width={60}
+                      height={60}
+                      className="rounded-md object-cover"
+                    />
+                  ))}
+                </div>
+                <button
+                  onClick={handleNext}
+                  className="mt-2 bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                >
+                  <FaAngleDown />
+                </button>
+              </div>
+
+              {/* Main Image Display */}
+              <div className="flex justify-center items-center gap-4">
+                <button
+                  onClick={handlePrevious}
+                  className="bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                >
+                  <FaChevronLeft />
+                </button>
+                <Image
+                  src={images[startIndex].image}
+                  alt={`main-carousel-image`}
+                  width={200}
+                  height={300}
+                  className="rounded-md border aspect-square sm:aspect-auto sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] border-gray-300"
+                />
+                <button
+                  onClick={handleNext}
+                  className="bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                >
+                  <FaChevronRight />
+                </button>
+              </div>
+
+              {/* Zoom Button */}
+              <div className="hidden sm:block">
+                <div className="flex items-center justify-center w-[50px] h-[50px] md:w-[70px] md:h-[70px] border border-gray-300">
+                  <MdZoomOutMap className="text-2xl md:text-4xl font-bold" />
+                </div>
+              </div>
+            </div>
+
+            <DialogFooter>
+              <div className="flex justify-center gap-4 w-full border-t border-gray-300 py-3">
+                <Button className="bg-white text-[#f67704] hover:bg-[#f67704] hover:text-white flex items-center gap-2">
+                  <AiOutlineLike /> Like
+                </Button>
+                <Button className="flex items-center gap-2">
+                  Chat Now <LuFileChartLine />
+                </Button>
+              </div>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
         <div className="flex justify-between items-center gap-2">
           {["Like", "Wink", "Follow"].map((action, idx) => (
             <div
@@ -124,19 +229,20 @@ const SliderImage: React.FC = () => {
                       alt={`search-image-${index}`}
                     />
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-[800px]  ">
+                  <DialogContent className="max-w-[90%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] mx-auto">
                     <DialogHeader>
                       <DialogTitle>
-                        <div className="grid grid-cols-2 items-center border-1 shadow-md rounded-sm w-full">
+                        <div className="grid grid-cols-2 items-center border shadow-md w-full p-2">
                           <Image
-                            className="w-16 h-16 rounded-full"
+                            className="w-12 h-12 md:w-16 md:h-16 rounded-full"
                             src={img.image}
-                            width={100}
-                            height={100}
+                            width={50}
+                            height={50}
                             alt={`search-image-${index}`}
                           />
-
-                          <p>Photos:{index + 3}</p>
+                          <p className="text-sm md:text-base">
+                            Photos: {startIndex + 1}
+                          </p>
                         </div>
                       </DialogTitle>
                       <DialogDescription>
@@ -144,78 +250,74 @@ const SliderImage: React.FC = () => {
                       </DialogDescription>
                     </DialogHeader>
 
-                    <div className="flex justify-between items-center">
-                      {/* Vertical Carousel */}
-                      <div className="h-full">
-                        <div className="border h-full mt-10">
-                          <Carousel
-                            opts={{ align: "start" }}
-                            orientation="vertical"
-                            className="w-full max-w-xs"
-                          >
-                            <CarouselContent className="h-[300px]">
-                              {getVisibleImages().map((img, index) => (
-                                <CarouselItem key={index} className="pt-1">
-                                  <div className="p-1">
-                                    <Card>
-                                      <CardContent className="flex items-center justify-center p-6">
-                                        <span className="text-3xl font-semibold">
-                                          {startIndex + index + 1}
-                                        </span>
-                                        <Image
-                                          src={img.image}
-                                          alt={`carousel-image-${
-                                            startIndex + index + 1
-                                          }`}
-                                          width={80}
-                                          height={100}
-                                          className="rounded-md"
-                                        />
-                                      </CardContent>
-                                    </Card>
-                                  </div>
-                                </CarouselItem>
-                              ))}
-                            </CarouselContent>
-                            <CarouselPrevious onClick={handlePrevious} />
-                            <CarouselNext onClick={handleNext} />
-                          </Carousel>
+                    <div className="flex flex-col sm:flex-row justify-center  px-2 md:gap-20 ">
+                      {/* Thumbnail Navigation */}
+                      <div className="hidden sm:flex flex-col items-center">
+                        <button
+                          onClick={handlePrevious}
+                          className="mb-2 bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                        >
+                          <IoChevronUp />
+                        </button>
+                        <div className="sm:h-[300px] sm:w-[80px] md:w-[100px] overflow-hidden border border-gray-300 flex flex-col items-center gap-2">
+                          {getVisibleImages().map((img, index) => (
+                            <Image
+                              key={index}
+                              src={img.image}
+                              alt={`carousel-image-${startIndex + index}`}
+                              width={60}
+                              height={60}
+                              className="rounded-md object-cover"
+                            />
+                          ))}
+                        </div>
+                        <button
+                          onClick={handleNext}
+                          className="mt-2 bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                        >
+                          <FaAngleDown />
+                        </button>
+                      </div>
+
+                      {/* Main Image Display */}
+                      <div className="flex justify-center items-center gap-4">
+                        <button
+                          onClick={handlePrevious}
+                          className="bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                        >
+                          <FaChevronLeft />
+                        </button>
+                        <Image
+                          src={images[startIndex].image}
+                          alt={`main-carousel-image`}
+                          width={200}
+                          height={300}
+                          className="rounded-md border aspect-square sm:aspect-auto sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] border-gray-300"
+                        />
+                        <button
+                          onClick={handleNext}
+                          className="bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+                        >
+                          <FaChevronRight />
+                        </button>
+                      </div>
+
+                      {/* Zoom Button */}
+                      <div className="hidden sm:block">
+                        <div className="flex items-center justify-center w-[50px] h-[50px] md:w-[70px] md:h-[70px] border border-gray-300">
+                          <MdZoomOutMap className="text-2xl md:text-4xl font-bold" />
                         </div>
                       </div>
-
-                      {/* Horizontal Carousel */}
-                      <div>
-                        <Carousel className="w-full max-w-xs mx-auto flex">
-                          <CarouselContent>
-                            {chartData.mutipleImages.map((img, idx) => (
-                              <CarouselItem key={img.id}>
-                                <div className="p-1">
-                                  <Card>
-                                    <div className="flex aspect-square items-center justify-center">
-                                      <Image
-                                        src={img.image}
-                                        alt={`carousel-image-${idx}`}
-                                        width={300}
-                                        height={350}
-                                      />
-                                    </div>
-                                  </Card>
-                                </div>
-                              </CarouselItem>
-                            ))}
-                          </CarouselContent>
-                          <CarouselPrevious onClick={handlePrevious} />
-                          <CarouselNext onClick={handleNext} />
-                        </Carousel>
-                      </div>
-
-                      <div className="h-full">Zoom</div>
                     </div>
 
                     <DialogFooter>
-                      <div className="flex items-center justify-center   itme gap-4 py-4 w-full border-t-4 shadow-2xl ">
-                        <Button>Like</Button>
-                        <Button>Chart now</Button>
+                      <div className="flex justify-center gap-4 w-full border-t border-gray-300 py-3">
+                        <Button className="bg-white text-[#f67704] hover:bg-[#f67704] hover:text-white flex items-center gap-2">
+                          <AiOutlineLike /> Like
+                        </Button>
+                        <Button className="flex items-center gap-2">
+                          Chat Now <LuFileChartLine />
+                        </Button>
                       </div>
                     </DialogFooter>
                   </DialogContent>

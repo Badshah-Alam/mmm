@@ -12,9 +12,11 @@ const ChatInbox = () => {
   return (
     <div className='shadow-xl border rounded-md  mt-4'>
       <div className='flex bg-white justify-between items-center mx-4 py-2'>
-        <p className='text-base font-semibold uppercase'>Mail</p>
+        <p className='text-base font-semibold uppercase'> Email
+        </p>
         <Button variant="secondary" size="secondary"  >
-          <MdMail className='text-xl' /> Change to mail
+          <MdMail className='text-xl' /> Change to  Email
+
         </Button>
       </div>
       <div className='bg-[#b7ddf3] py-20 gap-y-3 flex flex-col justify-center items-center'>

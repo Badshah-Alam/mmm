@@ -31,7 +31,7 @@ const MessageInbox = () => {
                     </div>
                 </div>
                 <Button variant="secondary" size="secondary"  >
-                    <MdMail className='text-xl' /> Change to mail
+                    <MdMail className='text-xl' /> Change to   Email
                 </Button>
             </div>
             <div className='bg-[#b7ddf3] h-[400px] py-20 gap-y-3 flex flex-col justify-center items-center'>

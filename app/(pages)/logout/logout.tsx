@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { BiShow } from "react-icons/bi";
 import { BiHide } from "react-icons/bi";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
-const Login = () => {
+
+const Logout = () => {
   const [showPassword, setShowPassword] = useState(false);
   return (
-    
     <div className="flex justify-center h-screen items-center ">
-        <div className="max-w-[504px] w-[90%] mx-auto my-8 border  rounded-lg shadow-xl shadow-slate-600">
+      <div className="max-w-[504px] w-[90%] mx-auto my-8 border  rounded-lg shadow-xl shadow-slate-600">
         <div className="px-8 pt-8 bg-white rounded-t-xl">
           <p className="text-2xl font-semibold lg:tex-[24px] text-[#2b3038]  lg:mb-5 mb-4">
             Log into Match Meet & Marry
@@ -44,7 +44,6 @@ const Login = () => {
                 <input
                   id="password"
                   type={showPassword ? "text" : "password"}
-
                   placeholder="Your Password"
                   className="w-full px-4 py-3 border rounded-md focus:outline-none focus:border-gray-400"
                 />
@@ -66,20 +65,15 @@ const Login = () => {
         </div>
         <div className="p-8 ">
           <div className="">
-            
-         
             <Link href="/search">
-            <Button className="w-full lg:text-[16px] bg-[#f77705] hover:bg-orange-600 text-white font-semibold py-6 rounded-md">
-              Log in
-            </Button>
-      </Link>
+              <Button className="w-full lg:text-[16px] bg-[#f77705] hover:bg-orange-600 text-white font-semibold py-6 rounded-md">
+                Log in
+              </Button>
+            </Link>
           </div>
-
           <div className="flex py-3 justify-between items-center gap-2">
             <div className="w-full h-[1px] bg-gray-600"></div>
-            <p className="  text-gray-500  text-sm">
-              or
-            </p>
+            <p className="  text-gray-500  text-sm">or</p>
             <div className="w-full h-[1px] bg-gray-600"></div>
           </div>
           <div className="py-2 mx-4">
@@ -101,12 +95,6 @@ const Login = () => {
         </div>
       </div>
     </div>
- 
   );
 };
-
-export default Login;
-
-
-
-
+export default Logout;

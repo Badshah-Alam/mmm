@@ -19,7 +19,7 @@ const LandingPage: React.FC<{ handleScrollToForm: () => void }> = ({ handleScrol
       </div>
       <div className="flex items-center justify-center flex-col gap-5 lg:h-screen h-[500px] ">
         <h1 className="text-white text-2xl md:text-5xl font-bold uppercase">
-          MEMBERS ON BestDates
+          MEMBERS ON Match Meet & Marry
         </h1>
         <p className="text-white text-base md:text-2xl font-semibold uppercase">
           Believe in Strong Connections Online

@@ -25,10 +25,11 @@ const PaidFeatures = () => {
       <div className='flex flex-col text-[#595959]  shadow-lg bg-white py-4 '>
       <p className='py-2 px-4 text-[18px] text-black font-semibold'>My Activity </p>
       <div className='flex px-4 hover:bg-[#f5f5f5] py-2 justify-between items-center'>
-        <p>Messages</p>
+        <p>Chat</p>
         <p className='bg-[#F77705] px-3 h-4 pb-[1px] rounded-md flex justify-center items-center text-white'>2</p>
       </div>
-      <p className='py-2 px-4 hover:bg-[#f5f5f5]'>Mail</p>
+      <p className='py-2 px-4 hover:bg-[#f5f5f5]'>Email
+      </p>
       <p className='py-2 px-4 hover:bg-[#f5f5f5]'>Following</p>
       </div>
     </div>

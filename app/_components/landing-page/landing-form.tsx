@@ -231,7 +231,7 @@ const LandingForm = (props: { ref: RefObject<HTMLDivElement | null> }) => {
         </div>
 
         <div className="bg-white rounded-xl p-5 shadow-xl">
-            <p className="text-xs text-center">You affirm that you are at least 18 years of age or the age of majority in the jurisdiction you are accessing BestDates from, and are fully able and competent to enter BestDates and comply with the BestDates Terms of Use & Service.</p>
+            <p className="text-xs text-center">You affirm that you are at least 18 years of age or the age of majority in the jurisdiction you are accessing  Match Meet & Marry from, and are fully able and competent to enter  Match Meet & Marry and comply with the  Match Meet & Marry Terms of Use & Service.</p>
          </div>
        </div>
       </div>

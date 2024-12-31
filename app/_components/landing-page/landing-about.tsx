@@ -63,12 +63,12 @@ export default function LandingAbout() {
                 <p className='text-2xl font-semibold'>About Us</p>
               </div>
             <p className=" text-[18px]">
-              BestDates is a premium site with an impressive history of bringing
+              Match Meet & Marry is a premium site with an impressive history of bringing
               people from different backgrounds together to communicate with
               each other.
             </p>
             <p className=" text-[18px]">
-           {`   Here at BestDates, we believe that you shouldn't be limited in
+           {`   Here at Match Meet & Marry, we believe that you shouldn't be limited in
               opportunities to build a social connection with someone. On the
               contrary, with the possibilities of the Internet, you should be
               able to spark some exciting conversations that can lead to

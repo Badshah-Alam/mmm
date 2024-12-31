@@ -8,4 +8,7 @@ interface PaidItem{
 }
 export const PaidItem:PaidItem[]=[{title: "Chat with anyone you like", icon: <IoChatbubbleEllipsesOutline className='text-xl'/>},
     {title: "Send Virtual Gifts", icon: <RiVipDiamondFill className='text-xl'  style={{color: "#55a6ee"}}/>},
-    {title: "Respond in Mail" , icon: <MdMail className="text-xl" style={{color: "fad1a8"}} />}];
+    {title: "Respond in   Email" , icon: <MdMail className="text-xl" style={{color: "fad1a8"}} />}];
+
+
+  

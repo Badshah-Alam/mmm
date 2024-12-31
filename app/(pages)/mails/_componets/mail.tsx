@@ -18,7 +18,7 @@ const Mail: React.FC = () => {
  
       <div className="w-full bg-white shadow h-full  ">
       <div className="flex gap-8 items-center pb-4 pt-4 ml-8">
-        <h1 className="text-2xl font-semibold">Mail</h1>
+        <h1 className="text-2xl font-semibold">Email</h1>
         <p className="text-gray-500">0 threads found</p>
       </div>
 

@@ -6,7 +6,7 @@ const Credits = () => {
   const data = [
     {
       url: "https://bestdates.com/static/img/svg/credits/mails.svg",
-      name: "Respond in Mail",
+      name: "Respond in Email",
     },
     {
       url: "https://bestdates.com/static/img/svg/credits/chats.svg",

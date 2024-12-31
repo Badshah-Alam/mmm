@@ -75,7 +75,6 @@ const EditPasswordForm: React.FC = () => {
       }
     }
   };
-
   return (
     <div className="lg:w-96 md:w-72 border shadow-sm bg-[#fafafa]">
       <form onSubmit={handleSubmit}>

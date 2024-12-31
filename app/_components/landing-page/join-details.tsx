@@ -16,7 +16,7 @@ const JoinDetails = () => {
   </div>
   <div className='flex flex-col gap-6'>
     <p className='text-2xl text-dark-mmm font-semibold'>24/7 customer support</p>
-    <p className='text-[18px]'>The BestDates online social platform has a friendly support team ready to answer all your questions and resolve any issues in time.</p>
+    <p className='text-[18px]'>The Match Meet & Marry online social platform has a friendly support team ready to answer all your questions and resolve any issues in time.</p>
   </div>
     </div>
    </div>

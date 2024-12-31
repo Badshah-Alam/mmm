@@ -44,14 +44,13 @@ export function NavMenu() {
          
           </DropdownMenuItem>
           <DropdownMenuItem className="py-2 font-semibold text-orange-mmm">
-           Log out
-          
+         
+        <Link href="/logout">Log out</Link> 
+
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-     
-     
-    
+
       </DropdownMenuContent>
     </DropdownMenu>
   )

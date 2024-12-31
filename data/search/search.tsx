@@ -60,7 +60,11 @@ export const SearchImg: SearchImg= {
       { image: "/assets/images/search/body (9).webp" },
       { image: "/assets/images/people/body (10).webp" },
       { image: "/assets/images/search/body (11).webp" },
-      { image: "/assets/images/search/body (12).webp" }
+      { image: "/assets/images/search/body (12).webp" },
+      { image: "/assets/images/search/body (12).webp" },
+      { image: "/assets/images/search/body (12).webp" },
+      { image: "/assets/images/search/body (12).webp" },
+      { image: "/assets/images/search/body (12).webp" },
     ]
   },
   2: {
@@ -82,7 +86,11 @@ export const SearchImg: SearchImg= {
       { image: "/assets/images/search/body (13).webp" },
       { image: "/assets/images/search/body (14).webp" },
       { image: "/assets/images/search/body (15).webp" },
-      { image: "/assets/images/search/body (12).webp" }
+      { image: "/assets/images/search/body (15).webp" },
+      { image: "/assets/images/search/body (15).webp" },
+      { image: "/assets/images/search/body (15).webp" },
+      { image: "/assets/images/search/body (15).webp" },
+      { image: "/assets/images/search/body (12).webp" },
     ]
   },
   3: {
@@ -103,7 +111,11 @@ export const SearchImg: SearchImg= {
     mutipleImages: [
       { image: "/assets/images/search/body (17).webp" },
       { image: "/assets/images/search/body (18).webp" },
-      { image: "/assets/images/search/body (19).webp" }
+      { image: "/assets/images/search/body (19).webp" },
+      { image: "/assets/images/search/body (19).webp" },
+      { image: "/assets/images/search/body (19).webp" },
+      { image: "/assets/images/search/body (19).webp" },
+      { image: "/assets/images/search/body (19).webp" },
     ]
   },
   4: {

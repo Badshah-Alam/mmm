@@ -14,7 +14,6 @@ const SearchNav = () => {
                     <p className='text-[#525252] px-4 py-2 rounded-full text-base font-semibold'>Following</p>
                 </div>
             </div>
-           
             <SearchFilter/>
         </div>
     )

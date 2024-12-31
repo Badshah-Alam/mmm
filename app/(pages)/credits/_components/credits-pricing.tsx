@@ -23,15 +23,15 @@ const CreditsPricing = () => {
           <p className=" mt-2 text-[18px]">*You’ll be charged immediately after clicking on a video.</p>
         </div>
   
-        {/* Mail Section */}
+        {/* Email Section */}
         <div className="mb-6 lg:text-[18px] text-[#333]">
-          <p className="text-[18px]  font-semibold mb-2 text-[#333]">Mail</p>
+          <p className="text-[18px]  font-semibold mb-2 text-[#333]">Email</p>
           <ul className="list-disc pl-6 text-[18px]   " >
-            <li className='pt-2'>Sending letters in mail to one particular member: first letter in a thread costs <strong>10 credits</strong>, each following letter costs <strong>30 credits</strong></li>
-            <li className='pt-2'>Opening letters in mail: first letter in a thread is free, each following letter costs <strong>10 credits</strong></li>
-            <li className='pt-2'> Sending photos in mail: <strong>free of charge</strong></li>
-            <li className='pt-2'>Opening photos in mail: first photo in a thread is free, each following photo costs <strong>10 credits</strong></li>
-            <li className='pt-2'>Opening videos in mail: <strong>50 credits</strong> per video</li>
+            <li className='pt-2'>Sending letters in Email to one particular member: first letter in a thread costs <strong>10 credits</strong>, each following letter costs <strong>30 credits</strong></li>
+            <li className='pt-2'>Opening letters in Email: first letter in a thread is free, each following letter costs <strong>10 credits</strong></li>
+            <li className='pt-2'> Sending photos in Email: <strong>free of charge</strong></li>
+            <li className='pt-2'>Opening photos in Email: first photo in a thread is free, each following photo costs <strong>10 credits</strong></li>
+            <li className='pt-2'>Opening videos in Email: <strong>50 credits</strong> per video</li>
           </ul>
           <p className=" mt-2 pt-2 text-[18px] text-[#008c48]">*You’ll be charged immediately after clicking on a photo or video.</p>
         </div>

@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { AiOutlineLike } from "react-icons/ai";
+import { number } from "zod";
 
 interface ImageData {
   id?: number;
@@ -34,18 +35,24 @@ interface ChartData {
   image: string;
   mutipleImages: ImageData[];
   camera: number;
+  name: string;
 }
 
 const SliderImage: React.FC = () => {
   const pathname = usePathname();
-
   const chartid = parseInt(pathname.split("/")[2], 10);
-  const chartData: ChartData | undefined = SearchImg[chartid];
 
+  const chartData: ChartData | undefined = SearchImg[chartid];
+  console.log(chartData);
   const [carouselState, setCarouselState] = useState({
     startIndex: 0,
     visibleImagesCount: 5,
   });
+
+  const [activeImage, setActiveImage] = useState<string>(
+    chartData?.mutipleImages[0].image || ""
+  );
+  console.log(activeImage);
 
   if (!chartData || !chartData.mutipleImages) {
     return <div>Chart not found!</div>;
@@ -67,7 +74,6 @@ const SliderImage: React.FC = () => {
       startIndex: (prevState.startIndex - 1 + images.length) % images.length,
     }));
   };
-
   const getVisibleImages = () => {
     return images
       .slice(startIndex, startIndex + visibleImagesCount)
@@ -79,6 +85,13 @@ const SliderImage: React.FC = () => {
       );
   };
 
+  const handleThumbnailClick = (index: number) => {
+    setActiveImage(images[index].image);
+    setCarouselState((prevState) => ({
+      ...prevState,
+      startIndex: index,
+    }));
+  };
   if (!chartData) {
     return <div>Chart not found!</div>;
   }
@@ -94,40 +107,35 @@ const SliderImage: React.FC = () => {
                 width={1000}
                 height={296}
                 className="xl:min-w-[296px] xl:w-[296px] w-full h-full object-cover cursor-pointer"
-                alt={chartData.image}
+                alt="img"
               />
             </Card>
-            {/* <Image
-                      src={img.image}
-                      width={100}
-                      height={100}
-                      className="w-full h-full aspect-square object-cover cursor-pointer"
-                      alt={`search-image-${index}`}
-                    /> */}
           </DialogTrigger>
           <DialogContent className="max-w-[90%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] mx-auto">
             <DialogHeader>
               <DialogTitle>
                 <div className="grid grid-cols-2 items-center border shadow-md w-full p-2">
-                  {/* <Image
-                            className="w-12 h-12 md:w-16 md:h-16 rounded-full"
-                            src={img.image}
-                            width={50}
-                            height={50}
-                            alt={`search-image-${index}`}
-                          /> */}
+                  <div className="flex items-center gap-2">
+                    <Image
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-full"
+                      src={chartData.image}
+                      width={50}
+                      height={50}
+                      // alt={`search-image-${index}`}
+                      alt="img"
+                    />
+                    <p className="text-sm ">{chartData.name}</p>
+                  </div>
+
                   <p className="text-sm md:text-base">
                     Photos: {startIndex + 1}
                   </p>
                 </div>
               </DialogTitle>
-              <DialogDescription>
-                {/* Explore the image in more detail. */}
-              </DialogDescription>
+              <DialogDescription></DialogDescription>
             </DialogHeader>
 
             <div className="flex flex-col sm:flex-row justify-center  px-2 md:gap-20 ">
-              {/* Thumbnail Navigation */}
               <div className="hidden sm:flex flex-col items-center">
                 <button
                   onClick={handlePrevious}
@@ -143,7 +151,8 @@ const SliderImage: React.FC = () => {
                       alt={`carousel-image-${startIndex + index}`}
                       width={60}
                       height={60}
-                      className="rounded-md object-cover"
+                      className="rounded-md object-cover  cursor-pointer"
+                      onClick={() => handleThumbnailClick(index)}
                     />
                   ))}
                 </div>
@@ -155,7 +164,6 @@ const SliderImage: React.FC = () => {
                 </button>
               </div>
 
-              {/* Main Image Display */}
               <div className="flex justify-center items-center gap-4">
                 <button
                   onClick={handlePrevious}
@@ -164,11 +172,11 @@ const SliderImage: React.FC = () => {
                   <FaChevronLeft />
                 </button>
                 <Image
-                  src={images[startIndex].image}
+                  src={images[startIndex]?.image}
                   alt={`main-carousel-image`}
                   width={200}
                   height={300}
-                  className="rounded-md border aspect-square sm:aspect-auto sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] border-gray-300"
+                  className="  rounded-md border aspect-square sm:aspect-auto sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] border-gray-300"
                 />
                 <button
                   onClick={handleNext}
@@ -178,7 +186,6 @@ const SliderImage: React.FC = () => {
                 </button>
               </div>
 
-              {/* Zoom Button */}
               <div className="hidden sm:block">
                 <div className="flex items-center justify-center w-[50px] h-[50px] md:w-[70px] md:h-[70px] border border-gray-300">
                   <MdZoomOutMap className="text-2xl md:text-4xl font-bold" />
@@ -200,14 +207,14 @@ const SliderImage: React.FC = () => {
         </Dialog>
 
         <div className="flex justify-between items-center gap-2">
-          {["Like", "Wink", "Follow"].map((action, idx) => (
+          {["Like", "Wink", "Follow"].map((action, index) => (
             <div
-              key={idx}
+              key={index}
               className="flex items-center w-full flex-col shadow-xl bg-white py-3 text-base text-[#F77705] hover:bg-[#F77705] hover:text-white rounded-md border-2 hover:border-[#F77705] font-semibold"
             >
-              {idx === 0 && <FaRegHeart className="text-xl" />}
-              {idx === 1 && <FaRegFaceGrinTongueWink className="text-xl" />}
-              {idx === 2 && <FaRegStar className="text-xl" />}
+              {index === 0 && <FaRegHeart className="text-xl" />}
+              {index === 1 && <FaRegFaceGrinTongueWink className="text-xl" />}
+              {index === 2 && <FaRegStar className="text-xl" />}
               {action}
             </div>
           ))}
@@ -218,7 +225,7 @@ const SliderImage: React.FC = () => {
           <p className="text-base uppercase font-semibold">Public Photos</p>
           <div className="grid grid-cols-2 gap-2 mt-2">
             {chartData.mutipleImages.slice(0, 3).map((img, index) => (
-              <div key={img.id}>
+              <div key={index}>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Image
@@ -233,25 +240,26 @@ const SliderImage: React.FC = () => {
                     <DialogHeader>
                       <DialogTitle>
                         <div className="grid grid-cols-2 items-center border shadow-md w-full p-2">
-                          <Image
-                            className="w-12 h-12 md:w-16 md:h-16 rounded-full"
-                            src={img.image}
-                            width={50}
-                            height={50}
-                            alt={`search-image-${index}`}
-                          />
+                          <div className="flex items-center gap-2">
+                            <Image
+                              className="w-12 h-12 md:w-16 md:h-16 rounded-full"
+                              src={img.image}
+                              width={50}
+                              height={50}
+                              alt={`search-image-${index}`}
+                            />
+                            <p className="text-sm ">{chartData.name}</p>
+                          </div>
+
                           <p className="text-sm md:text-base">
                             Photos: {startIndex + 1}
                           </p>
                         </div>
                       </DialogTitle>
-                      <DialogDescription>
-                        {/* Explore the image in more detail. */}
-                      </DialogDescription>
+                      <DialogDescription></DialogDescription>
                     </DialogHeader>
 
                     <div className="flex flex-col sm:flex-row justify-center  px-2 md:gap-20 ">
-                      {/* Thumbnail Navigation */}
                       <div className="hidden sm:flex flex-col items-center">
                         <button
                           onClick={handlePrevious}
@@ -261,14 +269,16 @@ const SliderImage: React.FC = () => {
                         </button>
                         <div className="sm:h-[300px] sm:w-[80px] md:w-[100px] overflow-hidden border border-gray-300 flex flex-col items-center gap-2">
                           {getVisibleImages().map((img, index) => (
-                            <Image
-                              key={index}
-                              src={img.image}
-                              alt={`carousel-image-${startIndex + index}`}
-                              width={60}
-                              height={60}
-                              className="rounded-md object-cover"
-                            />
+                            <div key={index}>
+                              <Image
+                                src={img.image}
+                                alt={`carousel-image-${startIndex + index}`}
+                                width={60}
+                                height={60}
+                                className="rounded-md object-cover  cursor-pointer"
+                                onClick={() => handleThumbnailClick(index)}
+                              />
+                            </div>
                           ))}
                         </div>
                         <button
@@ -279,7 +289,6 @@ const SliderImage: React.FC = () => {
                         </button>
                       </div>
 
-                      {/* Main Image Display */}
                       <div className="flex justify-center items-center gap-4">
                         <button
                           onClick={handlePrevious}
@@ -288,11 +297,12 @@ const SliderImage: React.FC = () => {
                           <FaChevronLeft />
                         </button>
                         <Image
-                          src={images[startIndex].image}
+                          // src={images[startIndex].image}
+                          src={images[startIndex]?.image}
                           alt={`main-carousel-image`}
                           width={200}
                           height={300}
-                          className="rounded-md border aspect-square sm:aspect-auto sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] border-gray-300"
+                          className="  rounded-md border aspect-square sm:aspect-auto sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] border-gray-300"
                         />
                         <button
                           onClick={handleNext}
@@ -302,7 +312,6 @@ const SliderImage: React.FC = () => {
                         </button>
                       </div>
 
-                      {/* Zoom Button */}
                       <div className="hidden sm:block">
                         <div className="flex items-center justify-center w-[50px] h-[50px] md:w-[70px] md:h-[70px] border border-gray-300">
                           <MdZoomOutMap className="text-2xl md:text-4xl font-bold" />
@@ -346,7 +355,7 @@ const SliderImage: React.FC = () => {
           <p className="text-base uppercase font-semibold">Private Photos</p>
           <div className="grid grid-cols-2 gap-2 mt-2">
             {chartData.mutipleImages.slice(0, 3).map((img, index) => (
-              <div className="relative" key={img.id}>
+              <div className="relative" key={index}>
                 <Image
                   src={img.image}
                   width={100}

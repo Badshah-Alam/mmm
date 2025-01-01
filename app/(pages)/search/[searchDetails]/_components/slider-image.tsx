@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { AiOutlineLike } from "react-icons/ai";
-import { number } from "zod";
+
 
 interface ImageData {
   id?: number;

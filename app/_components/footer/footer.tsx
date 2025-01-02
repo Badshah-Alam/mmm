@@ -1,7 +1,6 @@
 import { NavImages, NavItem } from "@/data/footer/footer";
 import React from "react";
 import Image from "next/image";
-
 const Footer = () => {
   return (
     <footer className="bg-[#FFE3D1]  w-full">
@@ -36,8 +35,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          {/* Right Section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-4 grid md:grid-cols-2 xl:grid-cols-4  gap-y-10">
             {NavItem.map((item, index) => (
               <div key={index} className="text-dark-mmm flex flex-col gap-y-3">
@@ -45,12 +42,14 @@ const Footer = () => {
                   {item.navHeading}
                 </p>
                 {item.menuOptions.map((option, index) => (
-                  <p
-                    key={index}
-                    className="text-base font-normal text-dark-mmm leading-relaxed"
-                  >
-                    {option.value}
-                  </p>
+              <a key={index} href={option.url}>
+                    <p
+                      
+                      className="text-base font-normal text-dark-mmm leading-relaxed"
+                    >
+                      {option.value}
+                    </p>
+                  </a>
                 ))}
               </div>
             ))}

@@ -1,35 +1,90 @@
-
-
-import React from "react";
+"use client";
+import { IoIosMenu } from "react-icons/io";
+import React, { useState } from "react";
 import AboutUs from "../aboutus/page";
+import Image from "next/image";
+import Link from "next/link";
 
 const AboutHeader = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className="border-b-2 border-gray-300">
-      <div className="w-[90%] mx-auto ">
-        <ul className="flex flex-col md:flex-row items-center justify-between py-6 gap-4">
-          <li className="font-bold">Match Meet & Marry</li>
+    <div className="border-b-2 border-gray-300  bg-gray-100    ">
+      <div className=" bg-gray-100 sticky top-0">
+        <div className="w-[90%] mx-auto  ">
+          {/* Header Container */}
+          <div className="flex items-center justify-between py-2">
+            {/* Menu Icon (Toggle Dropdown) */}
+            <IoIosMenu
+              className="text-xl cursor-pointer md:hidden"
+              onClick={toggleMenu}
+            />
 
-          <ul className="flex items-center gap-4 md:gap-10">
-            <li className="cursor-pointer hover:text-[#f67704]"><a href="#about-us-section">Home</a></li>
-            <li className="cursor-pointer hover:text-[#f67704]">
-               <a href="#How-we-enforce-the-rules">Rules and Policies</a>
-            </li>
-            <li className="cursor-pointer hover:text-[#f67704]">
-               <a href="#Transparency-reports">Transparency</a>
-            </li>
-            <li className="cursor-pointer hover:text-[#f67704]">
-              <a href="#How-we-prevent-scam">Educational Guides </a>
-            </li>
-          </ul>
+            {/* Logo */}
+            <Image
+              src={"/assets/images/login/logo.png"}
+              alt="logo"
+              width={150}
+              height={20}
+            />
 
-          <li className="cursor-pointer hover:text-blue-500">
-            Back to Match Meet & Marry
-          </li>
-        </ul>
+            {/* Navigation Links for Desktop */}
+            <ul className="hidden md:flex items-center gap-4 md:gap-8">
+              <li className="cursor-pointer hover:text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl">
+                <a href="#about-us-section">Home</a>
+              </li>
+              <li className="cursor-pointer hover:text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl">
+                <a href="#How-we-enforce-the-rules">Rules and Policies</a>
+              </li>
+              <li className="cursor-pointer hover:text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl">
+                <a href="#Transparency-reports">Transparency</a>
+              </li>
+              <li className="cursor-pointer hover:text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl">
+                <a href="#How-we-prevent-scam">Educational Guides</a>
+              </li>
+            </ul>
+
+            {/* Footer Text for Desktop */}
+            <p className="hidden md:block cursor-pointer hover:bg-[#f67704] hover:text-white text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl border py-2 px-2 rounded-md">
+              {/* <a href="/"> Back to Match Meet & Marry</a> */}
+
+              <Link href="/">
+                Back to Match Meet & Marry 
+              </Link>
+            </p>
+          </div>
+
+          {/* Dropdown Menu for Mobile */}
+          {menuOpen && (
+            <ul className="flex flex-col gap-4 bg-gray-100 p-4 md:hidden">
+              <li className="cursor-pointer hover:text-[#f67704] text-sm">
+                <a href="#about-us-section">Home</a>
+              </li>
+              <li className="cursor-pointer hover:text-[#f67704] text-sm">
+                <a href="#How-we-enforce-the-rules">Rules and Policies</a>
+              </li>
+              <li className="cursor-pointer hover:text-[#f67704] text-sm">
+                <a href="#Transparency-reports">Transparency</a>
+              </li>
+              <li className="cursor-pointer hover:text-[#f67704] text-sm">
+                <a href="#How-we-prevent-scam">Educational Guides</a>
+              </li>
+              <li className=" text-sm  hover:bg-[#f67704] hover:text-white text-[#f67704]  md:text-md lg:text-lg xl:text-xl">
+                
+              <Link href="/">
+                Back to Match Meet & Marry 
+              </Link>
+              </li>
+            </ul>
+          )}
+        </div>
       </div>
-    <AboutUs/>
 
+      <AboutUs />
     </div>
   );
 };

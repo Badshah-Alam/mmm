@@ -36,103 +36,104 @@ const AboutUs = () => {
     <div className="bg-white">
       <div className="grid grid-cols-1 md:grid-cols-8 md:gap-6 mt-5">
         {/* Sidebar */}
-        <div className="col-span-3  ml-16">
-          <nav className="sticky top-16 flex flex-col justify-center pt-10 gap-2 ml-16 mb-6">
-            <div className="mt-2 text-xl">
+        
+        <div className="col-span-3 ml-4 md:ml-8 lg:ml-16 pr-4 md:px-0">
+          <nav className="sticky top-16 flex flex-col justify-center pt-6 gap-2 mb-6">
+            <div className="mt-2 text-lg md:text-xl">
               <a
-                href="#about-us-section"
+                href="#about-us"
                 className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 About us
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#our-trust-and-safety-principles"
-                className="block text-gray-800 font-medium active hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
                 aria-current="page"
               >
                 Our Trust & Safety principles
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#How-we-enforce-the-rules"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 How we enforce the rules
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#How-our-Content-Moderation-team-works"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 How our Content Moderation team works
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#How-our-Dispute-Resolution-team-works"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 How our Dispute Resolution team works
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#How-we-prevent-scam"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 How we prevent scam
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#How-we-prevent-deception"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 How we prevent deception
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#How-we-fight-money-laundering"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 How we fight money laundering
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#Privacy-&-Security"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 Privacy & Security
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#How-we-fight-slavery"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 How we fight slavery
               </a>
             </div>
 
-            <div className="mt-2 text-xl">
+            <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#Transparency-reports"
-                className="block text-gray-800 font-medium py-1 hover:text-orange-500"
+                className="block text-gray-800 font-medium hover:text-orange-500"
               >
                 Transparency reports
               </a>
@@ -141,14 +142,14 @@ const AboutUs = () => {
         </div>
 
         {/* Main Content */}
-        <div className="col-span-5 mr-16">
+        <div className="col-span-5 mr-4 md:mr-8 lg:mr-16">
           <div className="">
-            <div className="flex-1">
-              <h1 className="bg-black text-4xl font-bold text-white h-32 flex items-center justify-center mt-8">
+            <div className="flex-1 pl-4 pt-6">
+              <p id="about-us" className="bg-black md:text-4xl text-xl md:font-bold  font-semibold text-white py-6 flex items-center justify-center mt-22">
                 Transparency
-              </h1>
-              <section id="about-us-section" className="mt-12">
-                <h2 className="text-4xl font-bold text-gray-800 mb-4 ">
+              </p>
+              <div  className="mt-12">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold text-gray-800 mb-4 ">
                   About us
                 </h2>
                 <>
@@ -163,7 +164,7 @@ const AboutUs = () => {
                     </button>
                   )}
                 </>
-                <section className="mb-8 text-gray-800 text-justify">
+                <div className="mb-8 text-gray-800 text-justify">
                   <p className="text-base leading-relaxed mb-4">
                     Welcome to our platform! We are here to create a worldwide
                     community that connects individuals who may never have the
@@ -175,13 +176,13 @@ const AboutUs = () => {
                     from different backgrounds and countries.
                   </p>
                   <p className="text-base leading-relaxed mb-4">
-                   {` Whether you're an extrovert or an introvert, we want you to
+                    {` Whether you're an extrovert or an introvert, we want you to
                     feel comfortable on our platform.`}
                   </p>
-                </section>
+                </div>
 
-                <section className="mb-2 text-gray-800 text-justify">
-                  <h3 className="text-2xl font-semibold  mb-4">
+                <div className="mb-2 text-gray-800 text-justify">
+                  <h3 className="md:text-2xl text-xl font-semibold  mb-4">
                     On our platform, we advocate core values such as:
                   </h3>
 
@@ -220,19 +221,19 @@ const AboutUs = () => {
                       personal information.
                     </p>
                   </div>
-                </section>
+                </div>
 
-                <section className="mb-2 pt-2 text-gray-800 text-justify">
-                  <h3 className="text-2xl font-semibold  mb-4">
+                <div className="mb-2 pt-2 text-gray-800 text-justify">
+                  <h3 className="md:text-2xl text-xl font-semibold  mb-4">
                     Community Guidelines
                   </h3>
                   <p className="text-base leading-relaxed mb-2">
-                  {`  Our freedom coexists with respect to other people's
+                    {`  Our freedom coexists with respect to other people's
                     boundaries. That's why we have some guidelines that we
                     believe must be followed.`}
                   </p>
                   <p className="text-base leading-relaxed mb-2">
-                  {`  Below you can see a summary of our rules and values. More
+                    {`  Below you can see a summary of our rules and values. More
                     detailed information about our platform's policies can be
                     found in the{" "}`}
                     <a
@@ -241,14 +242,14 @@ const AboutUs = () => {
                     >
                       Terms of Use{" "}
                     </a>
-                    section.
+                    div.
                   </p>
                   <p className="text-base leading-relaxed mb-2">
                     By using our platform, you agree to abide by these, which
                     are designed to keep the community healthy and respectful.
                     Please read through them carefully:
                   </p>
-                  <ol className="list-decimal pl-8 space-y-1 mb-2">
+                  <ol className="list-decimal md:pl-8 pl-4 space-y-1 mb-2">
                     <li className="leading-relaxed">
                       <b>Adults only</b>: You must be at least 18 years old to
                       use our platform. We also have a zero-tolerance policy for
@@ -258,7 +259,7 @@ const AboutUs = () => {
                       immediately.
                     </li>
                     <li className="leading-relaxed">
-                     {` <b>Respect</b>: Treat others as you'd like to be treated
+                      {` Respect: Treat others as you'd like to be treated
                       and maintain a respectful attitude - this includes
                       refraining from bullying, harassment, violence, abuse,
                       “stalking”, etc. This also applies to inclusivity.
@@ -312,46 +313,47 @@ const AboutUs = () => {
                   </div>
                   <p className="leading-relaxed mb-2">
                     {" "}
-                   {` We believe in your ability to respect and follow these
+                    {` We believe in your ability to respect and follow these
                     rules, and we're grateful to have you here as part of our
                     community.`}
                   </p>
-                </section>
-              </section>
+                </div>
+              </div>
 
-              <section
+              <div
                 id="our-trust-and-safety-principles"
-                className="pt-12 text-gray-800 text-justify mb-8"
+                className="pt-24 text-gray-800 text-justify mb-8"
               >
-                <h2 className="text-4xl font-bold  mb-6">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold  mb-6">
                   Our Trust & Safety principles
                 </h2>
-                <h3 className="text-2xl font-semibold  mb-8"> 👁️ Vision </h3>
+                <h3 className="md:text-2xl text-xl font-semibold  mb-8"> 👁️ Vision </h3>
                 <p className=" mb-4">
                   <b>The main goal of our team</b> is to create a safe and
                   exceptional environment for communication and interaction of
                   our users.
                 </p>
-                <h3 className="text-2xl font-semibold  mb-6"> 🛡️ Mission </h3>
+                <h3 className="md:text-2xl text-xl font-semibold  mb-6"> 🛡️ Mission </h3>
                 <p className="mb-4">
-                <strong>Our mission is simple:</strong> {` to make the world a
+                  <strong>Our mission is simple:</strong>{" "}
+                  {` to make the world a
                   better place by blocking users and content that shouldn't be
                   online.`}
                 </p>
                 <p className="mb-4">
-                {`  Think of us as a shield that protects our users from
+                  {`  Think of us as a shield that protects our users from
                   low-quality, harmful or irrelevant content, inappropriate
                   behavior, false expectations and fraud. We're committed to
                   developing effective preventative systems to ensure the safety
                   of our community.`}
                 </p>
-                <h3 className="text-2xl font-semibold mb-6"> 💓 Values </h3>
+                <h3 className="md:text-2xl text-xl font-semibold mb-6"> 💓 Values </h3>
                 <p className="mb-4">
                   Transparency and high quality are the foundation of our work.
                   We also place great emphasis on a data-driven and user-centric
                   approach.
                 </p>
-                <h3 className="text-2xl font-semibold mb-6"> 🎯 Our focus </h3>
+                <h3 className="md:text-2xl text-xl font-semibold mb-6"> 🎯 Our focus </h3>
                 <p className="mb-4">
                   As a team, we aim to achieve the following results in our
                   work:
@@ -374,13 +376,13 @@ const AboutUs = () => {
                   </li>
                   <li className="">Fair dispute settlement.</li>
                 </ul>
-              </section>
+              </div>
 
-              <section
+              <div
                 id="How-we-enforce-the-rules"
-                className="pt-12 text-gray-800 text-justify"
+                className="pt-24 text-gray-800 text-justify"
               >
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold mb-6">
                   How we enforce the rules
                 </h2>
                 <p className="text-base leading-relaxed mb-2">
@@ -448,13 +450,13 @@ const AboutUs = () => {
                     .
                   </p>
                 </div>
-              </section>
+              </div>
 
-              <section
+              <div
                 id="How-our-Content-Moderation-team-works"
-                className="pt-12 text-gray-800 text-justify"
+                className="pt-24 text-gray-800 text-justify"
               >
-                <h2 className="text-4xl font-bold mb-8">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold mb-8">
                   {" "}
                   How our Content Moderation team works{" "}
                 </h2>
@@ -470,12 +472,12 @@ const AboutUs = () => {
                   human moderation to cover all content shared across platform.
                 </p>
                 <p className="text-base leading-relaxed mb-2">
-                {`  To ensure successful AI and human moderation, we've taken a
+                  {`  To ensure successful AI and human moderation, we've taken a
                   few important steps:`}
                 </p>
                 <ol className="list-decimal pl-8  mb-2">
                   <li>
-                {`    We have set clear rules and limits on what is allowed and
+                    {`    We have set clear rules and limits on what is allowed and
                     what isn't;`}
                   </li>
                   <li>
@@ -483,7 +485,7 @@ const AboutUs = () => {
                     AI and verified the accuracy of its decisions;
                   </li>
                   <li>
-                   {` We have given our users the opportunity to dispute the AI's
+                    {` We have given our users the opportunity to dispute the AI's
                     decisions if they consider them invalid.`}
                   </li>
                 </ol>
@@ -498,16 +500,16 @@ const AboutUs = () => {
                     {" "}
                     Community Guidelines{" "}
                   </a>{" "}
-                 {` to ensure that content containing violence, hate speech, spam
+                  {` to ensure that content containing violence, hate speech, spam
                   or sexually explicit content aren't posted by users.`}
                 </p>
-              </section>
+              </div>
 
-              <section
+              <div
                 id="How-our-Dispute-Resolution-team-works"
-                className="pt-12 text-gray-800 text-justify"
+                className="pt-24 text-gray-800 text-justify"
               >
-                <h2 className="text-4xl font-bold mb-8">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold mb-8">
                   How our Dispute Resolution team works
                 </h2>
                 <p className="text-base leading-relaxed mb-4">
@@ -546,7 +548,7 @@ const AboutUs = () => {
                   outside of the platform cannot be used as grounds for
                   investigation.
                 </p>
-                <h3 className="text-2xl font-medium mb-2">
+                <h3 className="md:text-2xl text-xl font-medium mb-2">
                   When investigating a case, we follow these principles:
                 </h3>
                 <ol className="list-decimal pl-8  mb-2">
@@ -565,27 +567,27 @@ const AboutUs = () => {
                     accept further evidence;
                   </li>
                   <li>
-                  {`  Our investigation isn't limited to the platform. We may
+                    {`  Our investigation isn't limited to the platform. We may
                     conduct research outside of the platform to verify
                     information about a case. Dispute Resolution Team will
                     evaluate the admissibility of outside information. We may
                     also consider private correspondence, but only if it has
                     been voluntarily and lawfully provided to us;`}
                     <br />
-                  {`  The results of the case investigation won't be communicated
+                    {`  The results of the case investigation won't be communicated
                     to the parties involved (or to a party if the case is
                     against the platform). However, the decision on the
                     investigation will be shared with the affected party(ies) in
                     accordance with internal procedures.`}
                   </li>
                 </ol>
-              </section>
+              </div>
 
-              <section
+              <div
                 id="How-we-prevent-scam"
-                className="pt-14 text-gray-800 text-justify"
+                className="pt-24 text-gray-800 text-justify"
               >
-                <h2 className="text-4xl font-bold mb-6">How we prevent scam</h2>
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold mb-6">How we prevent scam</h2>
                 <p className="mb-2">
                   A scam is a deceitful conduct when a scammer receives or tries
                   to receive a benefit (usually money) from a victim (the person
@@ -622,12 +624,12 @@ const AboutUs = () => {
                     ;
                   </li>
                   <li className="">
-                   {` We've developed an Anti-scam system that helps us identify
+                    {` We've developed an Anti-scam system that helps us identify
                     suspicious activity in a timely manner. We constantly work
                     on the improvement of our Anti-scam systems;`}
                   </li>
                   <li className="">
-                 {`   We have our own content moderation system. If any content is
+                    {`   We have our own content moderation system. If any content is
                     detected that could defraud someone, it'll be removed
                     immediately. We take fraud very seriously and hold our users
                     accountable. Those involved in fraud will either be banned
@@ -683,18 +685,18 @@ const AboutUs = () => {
                   </ul>
                 </div>
                 <p className="mb-8">
-                {`  If you suspect that someone is trying to scam you, or if
+                  {`  If you suspect that someone is trying to scam you, or if
                   you're unfortunate enough to become a victim of scam, our
                   support team is here for you. We strongly encourage you to
                   contact us and report any potential or actual scam incident.`}
                 </p>
-              </section>
+              </div>
 
-              <section
+              <div
                 id="How-we-prevent-deception"
-                className="pt-12 text-gray-800 text-justify"
+                className="pt-24 text-gray-800 text-justify"
               >
-                <h2 className="text-4xl font-bold mb-4">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold mb-4">
                   How we prevent deception
                 </h2>
 
@@ -785,13 +787,13 @@ const AboutUs = () => {
                     approval.
                   </li>
                 </ul>
-              </section>
+              </div>
 
-              <section
+              <div
                 id="How-we-fight-money-laundering"
-                className="pt-12 text-justify"
+                className="pt-24 text-justify"
               >
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold mb-6">
                   How we fight money laundering
                 </h2>
 
@@ -818,7 +820,7 @@ const AboutUs = () => {
                 </p>
 
                 <p className="mb-4 text-gray-800">
-                 {` The security of your payments is of utmost importance to us
+                  {` The security of your payments is of utmost importance to us
                   and we use the most advanced measures to protect them. That is
                   why our platform fully complies with the standards of PCI DSS,
                   which meet the highest security requirements. If you'd like to
@@ -843,7 +845,7 @@ const AboutUs = () => {
                 </p>
 
                 <p className="mb-4 text-gray-800">
-               {`   We also use such patented anti-fraud systems to monitor the
+                  {`   We also use such patented anti-fraud systems to monitor the
                   use of funds (for information on the platform's internal
                   payment methods for paid services, please refer to our{" "}`}
                   <a
@@ -853,7 +855,7 @@ const AboutUs = () => {
                   >
                     Payment and Refund Policy
                   </a>
-                   {`As soon as this system detects suspicious activities of a
+                  {`As soon as this system detects suspicious activities of a
                   user, we're alerted immediately. In this way, we can
                   immediately inform users about questionable activities on the
                   platform. While this system cannot provide absolute protection
@@ -870,7 +872,7 @@ const AboutUs = () => {
                 </p>
 
                 <p className="mb-2 text-gray-800">
-                 {` In order to ensure the highest level of security and prevent
+                  {` In order to ensure the highest level of security and prevent
                   possible instances of financial fraud or breaches, you may be
                   required to complete a simple invoice verification process on
                   our website. For this, you'll need to upload a copy of your ID
@@ -878,27 +880,27 @@ const AboutUs = () => {
                   a precautionary measure to confirm your identity as a genuine
                   user and legitimate cardholder for the payment(s) in question.`}
                 </p>
-              </section>
+              </div>
 
-              <section
+              <div
                 id="Privacy-&-Security"
-                className="mt-12 text-grey-800 text-justify"
+                className="pt-24 text-grey-800 text-justify"
               >
-                <h1 className="text-4xl font-bold mb-4">
-                  Privacy &amp; Security
-                </h1>
+                <p className="md:text-4xl text-xl md:font-bold  font-semibold mb-4">
+                  Privacy &amp;  Security
+                </p>
                 <p className="mb-4 text-gray-800">
                   Because you entrust us with your information, the security and
                   the privacy of your data is our top priority. Ensuring that we
                   maintain a robust, transparent, and accountable security
                   program is core to our commitment to you.
                 </p>
-              </section>
+              </div>
 
-              <section className=" mb-4 text-gray-800 text-justify">
-                <h1 className="text-2xl font-semibold mb-3 mt-3 text-gray-800">
+              <div className=" mb-4 text-gray-800 text-justify">
+                <p className="md:text-2xl text-xl font-semibold mb-3 mt-3 text-gray-800">
                   Privacy&amp;Safety
-                </h1>
+                </p>
                 {[
                   {
                     id: "answer1",
@@ -946,7 +948,7 @@ const AboutUs = () => {
                           </li>
                           <li className="mb-1">{`Select "Settings."`}</li>
                           <li className="mb-1">
-                          {`  Click "Deactivate my account" and follow the
+                            {`  Click "Deactivate my account" and follow the
                             instructions.`}
                           </li>
                         </ul>
@@ -957,7 +959,7 @@ const AboutUs = () => {
                           </li>
                           <li className="mb-1">{`Select "Settings."`}</li>
                           <li className="mb-1">
-                          {`  Click "Account Deactivation" and follow the
+                            {`  Click "Account Deactivation" and follow the
                             instructions.`}
                           </li>
                         </ul>
@@ -1073,7 +1075,7 @@ const AboutUs = () => {
                           address.
                         </p>
                         <p className="text-base mb-2">
-                        {`  You'll need to accept the request from your new email
+                          {`  You'll need to accept the request from your new email
                           account listed in your profile. This helps us confirm
                           that you have access to the email address that you're
                           requesting to associate with your account.`}
@@ -1121,14 +1123,14 @@ const AboutUs = () => {
                     answer: (
                       <>
                         <p className="text-base mb-2">
-                        {`  Malicious software is any harmful application or file
+                          {`  Malicious software is any harmful application or file
                           designed to gain access to your computer or online
                           accounts. If you're infected, malicious software can
                           collect information from you and take unwanted actions
                           on your behalf.`}
                         </p>
                         <p className="text-base mb-2">
-                        {`  If we think you're infected with malicious software,
+                          {`  If we think you're infected with malicious software,
                           we may notify you and ask you to scan your computer or
                           mobile device with recommended software.`}
                         </p>
@@ -1153,7 +1155,7 @@ const AboutUs = () => {
                             than usual to complete.
                           </li>
                           <li>
-                          {`  You notice new applications that you don't remember
+                            {`  You notice new applications that you don't remember
                             installing.`}
                           </li>
                           <li>
@@ -1164,16 +1166,16 @@ const AboutUs = () => {
                         <p className="text-base mb-2">On your web browser:</p>
                         <ul className="list-disc pl-8 list-inside mb-2">
                           <li>
-                           {` You notice strange pop-ups or other ads that you
+                            {` You notice strange pop-ups or other ads that you
                             don't remember seeing before.`}
                           </li>
                           <li>
-                         {`   Your search engine or home page has changed and you
+                            {`   Your search engine or home page has changed and you
                             don't remember changing it.`}
                           </li>
                         </ul>
                         <p className="text-base mb-2">
-                         {` If malicious software appears on your computer or
+                          {` If malicious software appears on your computer or
                           mobile device, you'll want to remove it as quickly as
                           possible to protect yourself.`}
                         </p>
@@ -1295,7 +1297,7 @@ const AboutUs = () => {
                   </div>
                 ))}
 
-                <h1 className="text-2xl font-semibold mb-3 mt-3">Security</h1>
+                <p className="md:text-2xl text-xl font-semibold mb-3 mt-3">Security</p>
                 {[
                   {
                     id: "answer8",
@@ -1376,10 +1378,10 @@ const AboutUs = () => {
                     )}
                   </div>
                 ))}
-              </section>
+              </div>
 
-              <section id="How-we-fight-slavery" className="pt-8 text-justify">
-                <h2 className="text-4xl font-semibold mb-8">
+              <div id="How-we-fight-slavery" className="pt-24 text-justify">
+                <h2 className="md:text-4xl text-xl font-semibold mb-8">
                   How we fight slavery
                 </h2>
 
@@ -1391,7 +1393,7 @@ const AboutUs = () => {
                   the following:
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                <h3 className="md:text-2xl text-xl font-semibold mb-4 text-gray-800">
                   Our policies concerning slavery and human trafficking
                 </h3>
 
@@ -1425,7 +1427,7 @@ const AboutUs = () => {
                   .
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                <h3 className="md:text-2xl text-xl font-semibold mb-4 text-gray-800">
                   The training about slavery and human trafficking available to
                   our staff
                 </h3>
@@ -1437,7 +1439,7 @@ const AboutUs = () => {
                   and strong non-appreciation for slavery and human trafficking.
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                <h3 className="md:text-2xl text-xl font-semibold mb-4 text-gray-800">
                   Platform structure, business, and supply chains
                 </h3>
 
@@ -1459,7 +1461,7 @@ const AboutUs = () => {
                   with its suppliers but also the ethical ones.
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                <h3 className="md:text-2xl text-xl font-semibold mb-4 text-gray-800">
                   Our due diligence processes concerning slavery and human
                   trafficking in its business and supply chains
                 </h3>
@@ -1481,14 +1483,14 @@ const AboutUs = () => {
                   future collaboration.
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800 text-justify">
+                <h3 className="md:text-2xl text-xl font-semibold mb-4 text-gray-800 text-justify">
                   The parts of our business and supply chains with the risk of
                   slavery and human trafficking and the steps we have taken to
                   assess and manage that risk
                 </h3>
 
                 <p className=" text-gray-800 text-justify">
-                {`  We understand that our website may be abused by those that are
+                  {`  We understand that our website may be abused by those that are
                   interested in slavery and human trafficking. Therefore, we
                   believe that close supervision over the users' actions on the
                   platform is an essence in fighting against the hypothetical
@@ -1504,14 +1506,16 @@ const AboutUs = () => {
                   However, it is our strong position to report them in case we
                   detect such a breach.
                 </p>
-              </section>
+              </div>
 
-              <section className="pt-10 " id="Transparency-reports">
-                <h2 className="text-4xl font-bold mb-6">
+
+
+              <div className="pt-24 " id="Transparency-reports">
+                <h2 className="md:text-4xl text-xl md:font-bold  font-semibold mb-6">
                   Transparency reports
                 </h2>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                <h3 className="md:text-2xl text-xl font-semibold mb-4 text-gray-800">
                   2023 Transparency Report
                 </h3>
                 <p className="mb-4 text-justify">
@@ -1527,7 +1531,8 @@ const AboutUs = () => {
                   data-driven and user-centric approach.
                 </p>
                 <p className="mb-4 text-gray-800 text-justify">
-                  <strong>Our mission is simple:</strong> {`to make the world a
+                  <strong>Our mission is simple:</strong>{" "}
+                  {`to make the world a
                   better place by blocking users and content that shouldn't be
                   online. We act as a shield that protects our users from
                   low-quality, harmful or irrelevant content, inappropriate
@@ -1557,7 +1562,7 @@ const AboutUs = () => {
                     platform even further.
                   </li>
                   <li>
-               {`     We are contracted with partners, which undergo yearly audits
+                    {`     We are contracted with partners, which undergo yearly audits
                     by independent firms to ensure compliance of our Services
                     with PCI-DSS security requirements. The primary goal of PCI
                     DSS is to safeguard and optimize the security of sensitive
@@ -1576,7 +1581,7 @@ const AboutUs = () => {
                     access request is to use our online service. It takes about
                     10 minutes.
                     <p>
-                   {`   The subject access tool helps users to quickly identify
+                      {`   The subject access tool helps users to quickly identify
                       where to send their requests and how to get a response.
                       Privacy should never be an afterthought. Users' data is
                       critical to us, and we take great care to keep it safe and
@@ -1608,13 +1613,13 @@ const AboutUs = () => {
                   </li>
                   <li>
                     <strong>2.2 million</strong> is the total number of reviewed
-                    items (including user profiles) over H1 2023 period. Over H2
+                    items (including user profiles) over h1 2023 period. Over H2
                     2023 around <strong>1.2 million</strong> items (including
                     user profiles) were reviewed.
                   </li>
                   <li>
                     <strong>465,857</strong> violative items and accounts were
-                    actioned over H1 2023 period and <strong>382,390</strong>{" "}
+                    actioned over h1 2023 period and <strong>382,390</strong>{" "}
                     items over H2 2023 period.
                   </li>
                 </ul>
@@ -1700,120 +1705,156 @@ const AboutUs = () => {
                 </p>
 
                 <div className="overflow-x-auto">
-  <table className="border border-collapse border-black mb-4 w-full">
-    <thead>
-      <tr>
-        <th className="border border-black py-2 font-medium text-left text-gray-800">
-          Policy violation
-        </th>
-        <th className="border border-black py-2 font-bold">Jan&apos;23</th>
-        <th className="border border-black py-2 font-bold">Feb&apos;23</th>
-        <th className="border border-black py-2 font-bold">Mar&apos;23</th>
-        <th className="border border-black py-2 font-bold">Apr&apos;23</th>
-        <th className="border border-black py-2 font-bold">May&apos;23</th>
-        <th className="border border-black py-2 font-bold">Jun&apos;23</th>
-        <th className="border border-black py-2 font-bold">Jul&apos;23</th>
-        <th className="border border-black py-2 font-bold">Aug&apos;23</th>
-        <th className="border border-black py-2 font-bold">Sep&apos;23</th>
-        <th className="border border-black py-2 font-bold">Oct&apos;23</th>
-        <th className="border border-black py-2 font-bold">Nov&apos;23</th>
-        <th className="border border-black py-2 font-bold">Dec&apos;23</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td className="border border-black py-2 font-medium text-gray-800">Other violations</td>
-        <td className="border border-black py-2">53,96%</td>
-        <td className="border border-black py-2">55,00%</td>
-        <td className="border border-black py-2">51,29%</td>
-        <td className="border border-black py-2">52,74%</td>
-        <td className="border border-black py-2">54,56%</td>
-        <td className="border border-black py-2">60,89%</td>
-        <td className="border border-black py-2">58,81%</td>
-        <td className="border border-black py-2">2,23%</td>
-        <td className="border border-black py-2">3,36%</td>
-        <td className="border border-black py-2">4,31%</td>
-        <td className="border border-black py-2">4,5%</td>
-        <td className="border border-black py-2">5,59%</td>
-      </tr>
-      <tr>
-        <td className="border border-black py-2 font-medium text-gray-800">Low quality content</td>
-        <td className="border border-black py-2">25,49%</td>
-        <td className="border border-black py-2">24,24%</td>
-        <td className="border border-black py-2">26,21%</td>
-        <td className="border border-black py-2">25,32%</td>
-        <td className="border border-black py-2">24,90%</td>
-        <td className="border border-black py-2">21,32%</td>
-        <td className="border border-black py-2">22,52%</td>
-        <td className="border border-black py-2">50,96%</td>
-        <td className="border border-black py-2">49,76%</td>
-        <td className="border border-black py-2">46,53%</td>
-        <td className="border border-black py-2">45,27%</td>
-        <td className="border border-black py-2">42,74%</td>
-      </tr>
-      <tr>
-        <td className="border border-black py-2 font-medium text-gray-800">Adult Nudity and sexual activity</td>
-        <td className="border border-black py-2">18,71%</td>
-        <td className="border border-black py-2">18,92%</td>
-        <td className="border border-black py-2">20,33%</td>
-        <td className="border border-black py-2">20,12%</td>
-        <td className="border border-black py-2">18,94%</td>
-        <td className="border border-black py-2">16,05%</td>
-        <td className="border border-black py-2">16,85%</td>
-        <td className="border border-black py-2">42,10%</td>
-        <td className="border border-black py-2">41,53%</td>
-        <td className="border border-black py-2">44,58%</td>
-        <td className="border border-black py-2">45,74%</td>
-        <td className="border border-black py-2">47,48%</td>
-      </tr>
-      <tr>
-        <td className="border border-black py-2 font-medium text-gray-800">Scam activities</td>
-        <td className="border border-black py-2">0,04%</td>
-        <td className="border border-black py-2">0,05%</td>
-        <td className="border border-black py-2">0,07%</td>
-        <td className="border border-black py-2">0,05%</td>
-        <td className="border border-black py-2">0,03%</td>
-        <td className="border border-black py-2">0,01%</td>
-        <td className="border border-black py-2">0,03%</td>
-        <td className="border border-black py-2">0,09%</td>
-        <td className="border border-black py-2">0,10%</td>
-        <td className="border border-black py-2">0,09%</td>
-        <td className="border border-black py-2">0,06%</td>
-        <td className="border border-black py-2">0,09%</td>
-      </tr>
-      <tr>
-        <td className="border border-black py-2 font-medium text-gray-800">Integrity and authenticity</td>
-        <td className="border border-black py-2">0,90%</td>
-        <td className="border border-black py-2">0,89%</td>
-        <td className="border border-black py-2">1,05%</td>
-        <td className="border border-black py-2">0,89%</td>
-        <td className="border border-black py-2">0,63%</td>
-        <td className="border border-black py-2">0,97%</td>
-        <td className="border border-black py-2">0,92%</td>
-        <td className="border border-black py-2">2,11%</td>
-        <td className="border border-black py-2">2,14%</td>
-        <td className="border border-black py-2">1,78%</td>
-        <td className="border border-black py-2">1,74%</td>
-        <td className="border border-black py-2">2,34%</td>
-      </tr>
-      <tr>
-        <td className="border border-black py-2 font-medium text-gray-800">Violent and Hateful behaviour</td>
-        <td className="border border-black py-2">0,89%</td>
-        <td className="border border-black py-2">5,00%</td>
-        <td className="border border-black py-2">1,05%</td>
-        <td className="border border-black py-2">0,89%</td>
-        <td className="border border-black py-2">0,93%</td>
-        <td className="border border-black py-2">0,75%</td>
-        <td className="border border-black py-2">0,87%</td>
-        <td className="border border-black py-2">2,51%</td>
-        <td className="border border-black py-2">3,11%</td>
-        <td className="border border-black py-2">2,70%</td>
-        <td className="border border-black py-2">2,68%</td>
-        <td className="border border-black py-2">1,75%</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+                  <table className="border border-collapse border-black mb-4 w-full">
+                    <thead>
+                      <tr>
+                        <th className="border border-black py-2 font-medium text-left text-gray-800">
+                          Policy violation
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Jan&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Feb&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Mar&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Apr&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          May&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Jun&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Jul&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Aug&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Sep&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Oct&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Nov&apos;23
+                        </th>
+                        <th className="border border-black py-2 font-bold">
+                          Dec&apos;23
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-black py-2 font-medium text-gray-800">
+                          Other violations
+                        </td>
+                        <td className="border border-black py-2">53,96%</td>
+                        <td className="border border-black py-2">55,00%</td>
+                        <td className="border border-black py-2">51,29%</td>
+                        <td className="border border-black py-2">52,74%</td>
+                        <td className="border border-black py-2">54,56%</td>
+                        <td className="border border-black py-2">60,89%</td>
+                        <td className="border border-black py-2">58,81%</td>
+                        <td className="border border-black py-2">2,23%</td>
+                        <td className="border border-black py-2">3,36%</td>
+                        <td className="border border-black py-2">4,31%</td>
+                        <td className="border border-black py-2">4,5%</td>
+                        <td className="border border-black py-2">5,59%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-black py-2 font-medium text-gray-800">
+                          Low quality content
+                        </td>
+                        <td className="border border-black py-2">25,49%</td>
+                        <td className="border border-black py-2">24,24%</td>
+                        <td className="border border-black py-2">26,21%</td>
+                        <td className="border border-black py-2">25,32%</td>
+                        <td className="border border-black py-2">24,90%</td>
+                        <td className="border border-black py-2">21,32%</td>
+                        <td className="border border-black py-2">22,52%</td>
+                        <td className="border border-black py-2">50,96%</td>
+                        <td className="border border-black py-2">49,76%</td>
+                        <td className="border border-black py-2">46,53%</td>
+                        <td className="border border-black py-2">45,27%</td>
+                        <td className="border border-black py-2">42,74%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-black py-2 font-medium text-gray-800">
+                          Adult Nudity and sexual activity
+                        </td>
+                        <td className="border border-black py-2">18,71%</td>
+                        <td className="border border-black py-2">18,92%</td>
+                        <td className="border border-black py-2">20,33%</td>
+                        <td className="border border-black py-2">20,12%</td>
+                        <td className="border border-black py-2">18,94%</td>
+                        <td className="border border-black py-2">16,05%</td>
+                        <td className="border border-black py-2">16,85%</td>
+                        <td className="border border-black py-2">42,10%</td>
+                        <td className="border border-black py-2">41,53%</td>
+                        <td className="border border-black py-2">44,58%</td>
+                        <td className="border border-black py-2">45,74%</td>
+                        <td className="border border-black py-2">47,48%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-black py-2 font-medium text-gray-800">
+                          Scam activities
+                        </td>
+                        <td className="border border-black py-2">0,04%</td>
+                        <td className="border border-black py-2">0,05%</td>
+                        <td className="border border-black py-2">0,07%</td>
+                        <td className="border border-black py-2">0,05%</td>
+                        <td className="border border-black py-2">0,03%</td>
+                        <td className="border border-black py-2">0,01%</td>
+                        <td className="border border-black py-2">0,03%</td>
+                        <td className="border border-black py-2">0,09%</td>
+                        <td className="border border-black py-2">0,10%</td>
+                        <td className="border border-black py-2">0,09%</td>
+                        <td className="border border-black py-2">0,06%</td>
+                        <td className="border border-black py-2">0,09%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-black py-2 font-medium text-gray-800">
+                          Integrity and authenticity
+                        </td>
+                        <td className="border border-black py-2">0,90%</td>
+                        <td className="border border-black py-2">0,89%</td>
+                        <td className="border border-black py-2">1,05%</td>
+                        <td className="border border-black py-2">0,89%</td>
+                        <td className="border border-black py-2">0,63%</td>
+                        <td className="border border-black py-2">0,97%</td>
+                        <td className="border border-black py-2">0,92%</td>
+                        <td className="border border-black py-2">2,11%</td>
+                        <td className="border border-black py-2">2,14%</td>
+                        <td className="border border-black py-2">1,78%</td>
+                        <td className="border border-black py-2">1,74%</td>
+                        <td className="border border-black py-2">2,34%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-black py-2 font-medium text-gray-800">
+                          Violent and Hateful behaviour
+                        </td>
+                        <td className="border border-black py-2">0,89%</td>
+                        <td className="border border-black py-2">5,00%</td>
+                        <td className="border border-black py-2">1,05%</td>
+                        <td className="border border-black py-2">0,89%</td>
+                        <td className="border border-black py-2">0,93%</td>
+                        <td className="border border-black py-2">0,75%</td>
+                        <td className="border border-black py-2">0,87%</td>
+                        <td className="border border-black py-2">2,51%</td>
+                        <td className="border border-black py-2">3,11%</td>
+                        <td className="border border-black py-2">2,70%</td>
+                        <td className="border border-black py-2">2,68%</td>
+                        <td className="border border-black py-2">1,75%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
                 <div className="font-bold mb-4">Reports made on platform</div>
 
@@ -1898,83 +1939,142 @@ const AboutUs = () => {
                     Monthly Community Guidelines violations by policy:
                   </p>
                   <div className="overflow-x-auto">
-  <table className="border border-collapse w-full text-sm md:text-base">
-    <thead>
-      <tr className="bg-gray-100">
-        <th className="border border-black py-2 px-4 text-left font-medium text-gray-800">
-          Policy violation
-        </th>
-        <th className="border border-black py-2 px-4 text-left">Jan&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Feb&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Mar&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Apr&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">May&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Jun&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Jul&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Aug&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Sep&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Oct&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Nov&apos;23</th>
-        <th className="border border-black py-2 px-4 text-left">Dec&apos;23</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr className="odd:bg-white even:bg-gray-50">
-        <td className="border border-black py-2 px-4 font-medium text-gray-800">
-          Adult Nudity and sexual activity
-        </td>
-        <td className="border border-black py-2 px-4">22%</td>
-        <td className="border border-black py-2 px-4">9%</td>
-        <td className="border border-black py-2 px-4">10%</td>
-        <td className="border border-black py-2 px-4">16%</td>
-        <td className="border border-black py-2 px-4">17%</td>
-        <td className="border border-black py-2 px-4">19%</td>
-        <td className="border border-black py-2 px-4">26.3%</td>
-        <td className="border border-black py-2 px-4">17.6%</td>
-        <td className="border border-black py-2 px-4">27.3%</td>
-        <td className="border border-black py-2 px-4">31.6%</td>
-        <td className="border border-black py-2 px-4">21.7%</td>
-        <td className="border border-black py-2 px-4">25.0%</td>
-      </tr>
-      <tr className="odd:bg-white even:bg-gray-50">
-        <td className="border border-black py-2 px-4 font-medium text-gray-800">
-          Integrity and authenticity
-        </td>
-        <td className="border border-black py-2 px-4">22%</td>
-        <td className="border border-black py-2 px-4">26%</td>
-        <td className="border border-black py-2 px-4">20%</td>
-        <td className="border border-black py-2 px-4">28%</td>
-        <td className="border border-black py-2 px-4">13%</td>
-        <td className="border border-black py-2 px-4">10%</td>
-        <td className="border border-black py-2 px-4">21.1%</td>
-        <td className="border border-black py-2 px-4">11.8%</td>
-        <td className="border border-black py-2 px-4">9.1%</td>
-        <td className="border border-black py-2 px-4">15.8%</td>
-        <td className="border border-black py-2 px-4">13.0%</td>
-        <td className="border border-black py-2 px-4">12.5%</td>
-      </tr>
-      <tr className="odd:bg-white even:bg-gray-50">
-        <td className="border border-black py-2 px-4 font-medium text-gray-800">
-          Other policy violations
-        </td>
-        <td className="border border-black py-2 px-4">37%</td>
-        <td className="border border-black py-2 px-4">46%</td>
-        <td className="border border-black py-2 px-4">41%</td>
-        <td className="border border-black py-2 px-4">35%</td>
-        <td className="border border-black py-2 px-4">35%</td>
-        <td className="border border-black py-2 px-4">25%</td>
-        <td className="border border-black py-2 px-4">21.1%</td>
-        <td className="border border-black py-2 px-4">29.4%</td>
-        <td className="border border-black py-2 px-4">13.6%</td>
-        <td className="border border-black py-2 px-4">21.1%</td>
-        <td className="border border-black py-2 px-4">17.4%</td>
-        <td className="border border-black py-2 px-4">16.7%</td>
-      </tr>
-      {/* Repeat rows as needed */}
-    </tbody>
-  </table>
-</div>
-
+                    <table className="border border-collapse w-full text-sm md:text-base">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="border border-black py-2 px-4 text-left font-medium text-gray-800">
+                            Policy violation
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Jan&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Feb&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Mar&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Apr&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            May&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Jun&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Jul&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Aug&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Sep&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Oct&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Nov&apos;23
+                          </th>
+                          <th className="border border-black py-2 px-4 text-left">
+                            Dec&apos;23
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="odd:bg-white even:bg-gray-50">
+                          <td className="border border-black py-2 px-4 font-medium text-gray-800">
+                            Adult Nudity and sexual activity
+                          </td>
+                          <td className="border border-black py-2 px-4">22%</td>
+                          <td className="border border-black py-2 px-4">9%</td>
+                          <td className="border border-black py-2 px-4">10%</td>
+                          <td className="border border-black py-2 px-4">16%</td>
+                          <td className="border border-black py-2 px-4">17%</td>
+                          <td className="border border-black py-2 px-4">19%</td>
+                          <td className="border border-black py-2 px-4">
+                            26.3%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            17.6%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            27.3%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            31.6%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            21.7%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            25.0%
+                          </td>
+                        </tr>
+                        <tr className="odd:bg-white even:bg-gray-50">
+                          <td className="border border-black py-2 px-4 font-medium text-gray-800">
+                            Integrity and authenticity
+                          </td>
+                          <td className="border border-black py-2 px-4">22%</td>
+                          <td className="border border-black py-2 px-4">26%</td>
+                          <td className="border border-black py-2 px-4">20%</td>
+                          <td className="border border-black py-2 px-4">28%</td>
+                          <td className="border border-black py-2 px-4">13%</td>
+                          <td className="border border-black py-2 px-4">10%</td>
+                          <td className="border border-black py-2 px-4">
+                            21.1%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            11.8%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            9.1%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            15.8%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            13.0%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            12.5%
+                          </td>
+                        </tr>
+                        <tr className="odd:bg-white even:bg-gray-50">
+                          <td className="border border-black py-2 px-4 font-medium text-gray-800">
+                            Other policy violations
+                          </td>
+                          <td className="border border-black py-2 px-4">37%</td>
+                          <td className="border border-black py-2 px-4">46%</td>
+                          <td className="border border-black py-2 px-4">41%</td>
+                          <td className="border border-black py-2 px-4">35%</td>
+                          <td className="border border-black py-2 px-4">35%</td>
+                          <td className="border border-black py-2 px-4">25%</td>
+                          <td className="border border-black py-2 px-4">
+                            21.1%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            29.4%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            13.6%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            21.1%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            17.4%
+                          </td>
+                          <td className="border border-black py-2 px-4">
+                            16.7%
+                          </td>
+                        </tr>
+                        {/* Repeat rows as needed */}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <p className="font-bold my-4 text-justify">
                   Law Enforcement and Government Requests
@@ -1986,7 +2086,8 @@ const AboutUs = () => {
                   freedom of expression while adhering to relevant legal and
                   regulatory frameworks.
                 </p>
-              </section>
+              </div>
+
             </div>
           </div>
         </div>

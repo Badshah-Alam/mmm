@@ -14,8 +14,8 @@ interface MenuItem {
 export const MenuItems: MenuItem[] = [
     { id: 1, label: "Search", url:"/search" , icon: <MdPersonSearch className=" text-xl" /> },
     { id: 2, label: "Chat", url:"/chat" , icon: <BiMessageDetail className="text-xl" />, notificationCount: 0 },
-    { id: 3, label: "Email", url:"/mails" , icon: <IoMdMail className="text-xl" /> },
-    { id: 4, label: "feeds", url:"news-feed" , icon: <FaNewspaper className="text-xl" /> },
+    { id: 3, label: "Message", url:"/mails" , icon: <IoMdMail className="text-xl" /> },
+    { id: 4, label: "Media", url:"news-feed" , icon: <FaNewspaper className="text-xl" /> },
     { id: 5, label: "People", url:"/people" , icon: <RiContactsBook2Fill className="text-xl" /> },
-    { id: 6, label: "Credits", url:"/credits" , icon: <BiSolidCoinStack className="text-xl" /> },
+    { id: 6, label: "Coins", url:"/credits" , icon: <BiSolidCoinStack className="text-xl" /> },
   ];

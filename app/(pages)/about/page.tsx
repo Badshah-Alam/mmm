@@ -5,6 +5,7 @@ import AboutUs from "../aboutus/page";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const AboutHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -49,13 +50,13 @@ const AboutHeader = () => {
             </ul>
 
             {/* Footer Text for Desktop */}
-            <p className="hidden md:block cursor-pointer hover:bg-[#f67704] hover:text-white text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl border py-2 px-2 rounded-md">
-              {/* <a href="/"> Back to Match Meet & Marry</a> */}
-
-              <Link href="/">
-                Back to Match Meet & Marry 
-              </Link>
-            </p>
+            <Link href="/">
+              {" "}
+              <p className="hidden md:block cursor-pointer hover:bg-[#f67704] hover:text-white text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl border py-2 px-2 rounded-md">
+                {/* <a href="/"> Back to Match Meet & Marry</a> */}
+                Back to Match Meet & Marry
+              </p>
+            </Link>
           </div>
 
           {/* Dropdown Menu for Mobile */}
@@ -73,12 +74,11 @@ const AboutHeader = () => {
               <li className="cursor-pointer hover:text-[#f67704] text-sm">
                 <a href="#How-we-prevent-scam">Educational Guides</a>
               </li>
-              <li className=" text-sm  hover:bg-[#f67704] hover:text-white text-[#f67704]  md:text-md lg:text-lg xl:text-xl">
-                
               <Link href="/">
-                Back to Match Meet & Marry 
+                <p className=" text-sm  hover:bg-[#f67704] hover:text-white text-[#f67704]  md:text-md lg:text-lg xl:text-xl">
+                  Back to Match Meet & Marry
+                </p>
               </Link>
-              </li>
             </ul>
           )}
         </div>

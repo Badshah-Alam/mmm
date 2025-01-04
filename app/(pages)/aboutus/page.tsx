@@ -38,7 +38,7 @@ const AboutUs = () => {
         {/* Sidebar */}
         
         <div className="col-span-3 ml-4 md:ml-8 lg:ml-16 pr-4 md:px-0">
-          <nav className="sticky top-16 flex flex-col justify-center pt-6 gap-2 mb-6">
+          <nav className="sm:sticky sm:top-16 flex flex-col justify-center pt-6 gap-2 mb-6">
             <div className="mt-2 text-lg md:text-xl">
               <a
                 href="#about-us"

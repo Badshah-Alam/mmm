@@ -1,6 +1,7 @@
 import { NavImages, NavItem } from "@/data/footer/footer";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-[#FFE3D1]  w-full">
@@ -42,14 +43,22 @@ const Footer = () => {
                   {item.navHeading}
                 </p>
                 {item.menuOptions.map((option, index) => (
-              <a key={index} href={option.url}>
+                   
+         <Link   href={option.url || "#"}  key={index}>
+              
                     <p
                       
                       className="text-base font-normal text-dark-mmm leading-relaxed"
                     >
                       {option.value}
                     </p>
-                  </a>
+                
+         </Link>
+
+
+
+
+
                 ))}
               </div>
             ))}
@@ -61,3 +70,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

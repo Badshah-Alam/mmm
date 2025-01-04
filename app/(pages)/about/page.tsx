@@ -1,10 +1,13 @@
+
+
+
 "use client";
 import { IoIosMenu } from "react-icons/io";
+import { RxCross1 } from "react-icons/rx";
 import React, { useState } from "react";
 import AboutUs from "../aboutus/page";
 import Image from "next/image";
 import Link from "next/link";
-
 
 const AboutHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,20 +17,29 @@ const AboutHeader = () => {
   };
 
   return (
-    <div className="border-b-2 border-gray-300  bg-gray-100    ">
-      <div className=" bg-gray-100 sticky top-0">
-        <div className="w-[90%] mx-auto  ">
+    <div className="border-b-2 border-gray-300 bg-gray-100">
+      <div className="bg-gray-100 sticky top-0">
+        <div className="w-[90%] mx-auto">
           {/* Header Container */}
-          <div className="flex items-center justify-between py-2">
-            {/* Menu Icon (Toggle Dropdown) */}
-            <IoIosMenu
-              className="text-xl cursor-pointer md:hidden"
-              onClick={toggleMenu}
-            />
+          <div className="flex items-center justify-between md:py-2">
+            {/* Menu Toggle Icon */}
+            {menuOpen ? (
+              <RxCross1
+                aria-label="Close menu"
+                className="text-3xl cursor-pointer md:hidden"
+                onClick={toggleMenu}
+              />
+            ) : (
+              <IoIosMenu
+                aria-label="Open menu"
+                className="text-3xl cursor-pointer md:hidden"
+                onClick={toggleMenu}
+              />
+            )}
 
             {/* Logo */}
             <Image
-              src={"/assets/images/login/logo.png"}
+              src="/assets/images/login/logo.png"
               alt="logo"
               width={150}
               height={20}
@@ -51,9 +63,7 @@ const AboutHeader = () => {
 
             {/* Footer Text for Desktop */}
             <Link href="/">
-              {" "}
               <p className="hidden md:block cursor-pointer hover:bg-[#f67704] hover:text-white text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl border py-2 px-2 rounded-md">
-                {/* <a href="/"> Back to Match Meet & Marry</a> */}
                 Back to Match Meet & Marry
               </p>
             </Link>
@@ -75,7 +85,7 @@ const AboutHeader = () => {
                 <a href="#How-we-prevent-scam">Educational Guides</a>
               </li>
               <Link href="/">
-                <p className=" text-sm  hover:bg-[#f67704] hover:text-white text-[#f67704]  md:text-md lg:text-lg xl:text-xl">
+                <p className="text-sm hover:bg-[#f67704] hover:text-white text-[#f67704]">
                   Back to Match Meet & Marry
                 </p>
               </Link>

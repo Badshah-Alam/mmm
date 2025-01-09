@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
@@ -12,7 +11,6 @@ import { FaAngleDown } from "react-icons/fa6";
 import { IoChevronUp } from "react-icons/io5";
 import { MdZoomOutMap } from "react-icons/md";
 import { LuFileChartLine } from "react-icons/lu";
-
 import {
   Dialog,
   DialogContent,
@@ -24,7 +22,6 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { AiOutlineLike } from "react-icons/ai";
-
 
 interface ImageData {
   id?: number;

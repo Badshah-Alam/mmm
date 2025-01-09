@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
-// import "./globals.css";
 
-// import Footer from "@/app/_components/footer/footer";
 
 
 export const metadata: Metadata = {
@@ -19,5 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body className=" bg-smoke-mmm">{children}</body>
     </html>
+   
+  
   );
 }
+

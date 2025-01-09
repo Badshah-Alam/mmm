@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 
 import "./globals.css";
@@ -6,7 +5,6 @@ import "./globals.css";
 import Footer from "./_components/footer/footer";
 
 import NavbarMain from "./_components/navbar/navbar-main";
-
 
 export const metadata: Metadata = {
   title: "MMM",
@@ -20,15 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className=" bg-smoke-mmm"
-      >
-       <NavbarMain/>
-       
-        {children}
+      <body className=" bg-smoke-mmm">
+        <NavbarMain />
+        <main> {children}</main>
         <Footer />
       </body>
     </html>
   );
 }
-

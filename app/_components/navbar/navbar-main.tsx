@@ -16,7 +16,7 @@ const NavbarMain = () => {
       {pathname === "/login" && <NavbarSecond />}
       {pathname !== "/" &&
         pathname !== "/login" &&
-        pathname !== "/loginstep" &&
+        pathname !== "/loginstep" &&  pathname !== "/about" &&
         pathname !== "/loginstep/step2" && pathname !== "/loginstep/step31" && pathname !== "/loginstep/step4" && pathname !== "/loginstep/step5" && pathname !== "/loginstep/step6" && <Navbar />}
     </>
   );

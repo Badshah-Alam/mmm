@@ -11,18 +11,18 @@ import Link from "next/link";
 
 const AboutHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+   
   };
 
   return (
     <div className="border-b-2 border-gray-300 bg-gray-100">
       <div className="bg-gray-100 sticky top-0">
         <div className="w-[90%] mx-auto">
-          {/* Header Container */}
+        
           <div className="flex items-center justify-between md:py-2">
-            {/* Menu Toggle Icon */}
+            
             {menuOpen ? (
               <RxCross1
                 aria-label="Close menu"
@@ -45,7 +45,6 @@ const AboutHeader = () => {
               height={20}
             />
 
-            {/* Navigation Links for Desktop */}
             <ul className="hidden md:flex items-center gap-4 md:gap-8">
               <li className="cursor-pointer hover:text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl">
                 <a href="#about-us-section">Home</a>
@@ -61,7 +60,7 @@ const AboutHeader = () => {
               </li>
             </ul>
 
-            {/* Footer Text for Desktop */}
+           
             <Link href="/">
               <p className="hidden md:block cursor-pointer hover:bg-[#f67704] hover:text-white text-[#f67704] text-sm md:text-md lg:text-lg xl:text-xl border py-2 px-2 rounded-md">
                 Back to Match Meet & Marry
@@ -93,7 +92,6 @@ const AboutHeader = () => {
           )}
         </div>
       </div>
-
       <AboutUs />
     </div>
   );

@@ -43,22 +43,11 @@ const Footer = () => {
                   {item.navHeading}
                 </p>
                 {item.menuOptions.map((option, index) => (
-                   
-         <Link   href={option.url || "#"}  key={index}>
-              
-                    <p
-                      
-                      className="text-base font-normal text-dark-mmm leading-relaxed"
-                    >
+                  <Link href={option.url || "#"} key={index}>
+                    <p className="text-base font-normal text-dark-mmm leading-relaxed">
                       {option.value}
                     </p>
-                
-         </Link>
-
-
-
-
-
+                  </Link>
                 ))}
               </div>
             ))}
@@ -70,4 +59,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
